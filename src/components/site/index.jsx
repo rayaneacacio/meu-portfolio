@@ -5,16 +5,16 @@ import { Container } from "./style";
 
 export function Site({ img, name, description, repository, deploy }) {
   return (
-    <Container style={{ backgroundImage: `url(${ img })` }}>
-      {/* <img src={ img } alt="" /> */}
+    <Container>
+      <div style={{ backgroundImage: `url(${ img })` }}></div>
 
       <h2>{ name }</h2>
 
       <p>{ description }</p>
 
-      <div className="div_buttons">
-        <button> <FaGithub size={ 30 } /> </button>
-        <button> <MdVisibility size={ 30 } /> </button>
+      <div className="div_links">
+        <a href={ repository } target="_blank" title="repositório" > <FaGithub size={ 30 } /> </a>
+        <a href={ deploy } target="_blank" title="deploy" > <MdVisibility size={ 30 } /> </a>
       </div>
     </Container>
   )
