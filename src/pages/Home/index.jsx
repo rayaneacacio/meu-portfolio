@@ -8,6 +8,7 @@ import { FaNodeJs } from "react-icons/fa";
 
 import logoZer01Modas from "../../assets/logo-zer01modas.svg";
 import logoFoodExplorer from "../../assets/logo-foodexplorer.png";
+import logoRocketMovies from "../../assets/logo-rocketmovies.png";
 import icondev from "../../assets/devicon.svg";
 
 import { Site } from "../../components/site";
@@ -15,11 +16,42 @@ import { Site } from "../../components/site";
 import { Container, Main } from "./style";
 
 export function Home() {
-  function handleNavigateProjetos() {
-    const divProjetos = document.querySelector(".projetos");
-    console.log( divProjetos.clientHeight );
+  function handleNavigateSections(section) {
+    //para a scroll rolar ate a section escolhida;
+    let div = (section.target.innerText).toLowerCase();
+    div = div.replace(" ", "_");
+
+    window.scroll({
+      top: (0, document.querySelector(`.${ div }`).offsetTop - 200),
+      behavior: "smooth"
+    });
+
+    Array.from(document.querySelectorAll("ul")).map(ul => ul.style.border = "none");
+
+    section.target.style.borderBottom = "3px solid #FEBED1";
   }
 
+  window.addEventListener('scroll', () => {
+    //para o menu acompanhar a scroll;
+    Array.from(document.querySelectorAll("main > div")).map(div => {
+      if(div.offsetTop >= window.scrollY && div.offsetTop < window.scrollY+300) {
+        Array.from(document.querySelectorAll("ul")).map(ul => {
+          let section = div.className.toUpperCase();
+          section = section.replace("_", " ");
+          
+          if(ul.innerText == section) {
+            ul.style.borderBottom = "3px solid #FEBED1";
+          } else {
+            ul.style.border = "none";
+          }
+
+        });
+      }
+    });
+
+  });
+
+  
   return (
     <Container>
 
@@ -27,9 +59,9 @@ export function Home() {
         <img src={ icondev } alt="" />
 
         <nav>
-          <ul>HOME</ul>
-          <ul>SOBRE MIM</ul>
-          <ul onClick={ handleNavigateProjetos } >PROJETOS</ul>
+          <ul onClick={(event) => handleNavigateSections(event) } > HOME </ul>
+          <ul onClick={(event) => handleNavigateSections(event) } > SOBRE MIM </ul>
+          <ul onClick={(event) => handleNavigateSections(event) } > PROJETOS </ul>
           <a href="https://www.instagram.com/rayaneakkacio/" target="_blank"> <FaSquareInstagram size={ 23 } /> </a>
           <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank"> <BsLinkedin size={ 23 } /> </a>
           <a href="https://github.com/rayaneacacio" target="_blank"> <FaGithub size={ 24 } /> </a>
@@ -63,8 +95,9 @@ export function Home() {
         </div>
 
         <div className="projetos">
-          <Site img={ logoZer01Modas } name="Zer01 Modas" description="e-commerce de vendas de roupas" repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app" />
-          <Site img={ logoFoodExplorer } name="Food Explorer" description="e-commerce de vendas de roupas" repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app" />
+          <Site img={ logoZer01Modas } name="Zer01 Modas" description="E-commerce de vendas de roupas" repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app" />
+          <Site img={ logoFoodExplorer } name="Food Explorer" description="restaurante fictício" repository="https://github.com/rayaneacacio/food-explorer" deploy="https://sparkly-pavlova-9f4ab9.netlify.app/" />
+          <Site img={ logoRocketMovies } name="Rocket Movies" description="favoritar filmes" repository="https://github.com/rayaneacacio/rocket-movies" deploy="https://main--reactrocketmovies.netlify.app/" />
         </div>
       </Main>
 

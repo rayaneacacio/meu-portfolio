@@ -2,11 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
-  /* height: 100vh; */
   color: ${({ theme }) => theme.COLORS.PINK};
   position: relative;
-
-  /* overflow-y: hidden; */
 
   header {
     background: ${({ theme }) => theme.COLORS.BACKGROUND};
@@ -39,16 +36,20 @@ export const Container = styled.div`
     font-weight: bold;
   }
 
-  ul, a {
+  nav ul, nav a {
     color: ${({ theme }) => theme.COLORS.PINK};
     padding: 3.8rem 1rem;
   }
 
-  ul:hover, a:hover {
-    border-bottom: 3px solid ${({ theme }) => theme.COLORS.PINK};
+  nav ul:hover {
+    border-bottom: 3px solid ${({ theme }) => theme.COLORS.PINK} !important;
   }
 
-  .home button {
+  nav a:hover {
+    border-bottom: 3px solid transparent; 
+  }
+
+  button {
     background: ${({ theme }) => theme.COLORS.PINK};
     font-family: ${({ theme }) => theme.FONTS.MONTSERRAT};
     font-size: 1.7rem;
@@ -60,7 +61,6 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.main`
-  /* height: 200rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,7 +68,6 @@ export const Main = styled.main`
   overflow-y: auto;
 
   > div {
-    /* height: calc(100vh - 10rem); */
     height: 100vh;
   }
 
@@ -97,6 +96,7 @@ export const Main = styled.main`
 
   .projetos {
     display: flex;
+    justify-content: center;
     gap: 5rem;
     flex-wrap: wrap;
   }

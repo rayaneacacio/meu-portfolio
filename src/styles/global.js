@@ -17,6 +17,17 @@ export default createGlobalStyle`
     font-size: 1.6rem;
     background: ${({ theme }) => theme.COLORS.BACKGROUND};
     overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      background: none;
+      width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: ${({ theme }) => theme.COLORS.PINK};
+      border-radius: 8px;
+    }
   }
 
   button, a, ul {

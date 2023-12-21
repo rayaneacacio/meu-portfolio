@@ -5,7 +5,7 @@ export default {
     PINK: "#FEBED1",
     // PINK_200: "#fad1dd",
 
-    BACKGROUND: "rgb(34, 34, 34);",
+    BACKGROUND: "rgb(34, 34, 34)",
 
     WHITE: "#FFF",
   },
