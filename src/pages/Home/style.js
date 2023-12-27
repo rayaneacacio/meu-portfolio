@@ -16,7 +16,7 @@ export const Container = styled.div`
 
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
   }
 
   header > div {
@@ -42,10 +42,10 @@ export const Container = styled.div`
   }
 
   nav ul:hover {
-    border-bottom: 3px solid ${({ theme }) => theme.COLORS.PINK} !important;
+    /* border-bottom: 3px solid ${({ theme }) => theme.COLORS.PINK} !important; */
   }
 
-  nav a:hover {
+  nav a:hover, nav ul:hover {
     border-bottom: 3px solid transparent; 
   }
 
@@ -58,6 +58,15 @@ export const Container = styled.div`
     border-radius: 8px;
     margin-top: 3rem;
   }
+
+  footer {
+    background: ${({ theme }) => theme.COLORS.PINK};
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    width: 100%;
+    height: 5rem;
+    text-align: end;
+    padding: 1rem 2rem 0;
+  }
 `;
 
 export const Main = styled.main`
@@ -68,7 +77,7 @@ export const Main = styled.main`
   overflow-y: auto;
 
   > div {
-    height: 100vh;
+    height: 80rem;
   }
 
   .home {
@@ -90,11 +99,39 @@ export const Main = styled.main`
 
   .icons_linguage {
     display: flex;
+    gap: 10rem;
+    /* margin-top: 5rem; */
+  }
+
+  .sobre_mim {
+    background: ${({ theme }) => theme.COLORS.PINK};
+    color: ${({ theme }) => theme.COLORS.BACKGROUND};
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
     gap: 5rem;
-    margin-top: 5rem;
+
+    padding: 10rem 0;
+
+    p {
+      width: 50%;
+    }
   }
 
   .projetos {
+    background: ${({ theme }) => theme.COLORS.BACKGROUND};
+    width: 90%;
+    padding-top: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 30px;
+    margin-top: -20rem;
+    margin-bottom: 20rem;
+
     display: flex;
     justify-content: center;
     gap: 5rem;

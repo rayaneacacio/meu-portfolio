@@ -14,7 +14,7 @@ export default createGlobalStyle`
   }
 
   body {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     background: ${({ theme }) => theme.COLORS.BACKGROUND};
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -28,6 +28,10 @@ export default createGlobalStyle`
       background: ${({ theme }) => theme.COLORS.PINK};
       border-radius: 8px;
     }
+  }
+
+  h1, h2 {
+    font-family: ${({ theme }) => theme.FONTS.MONTSERRAT};
   }
 
   button, a, ul {
@@ -52,6 +56,15 @@ export default createGlobalStyle`
       opacity: 1;
       transform: translateY(2rem);
       transform: translateX(2rem);
+    }
+  }
+
+  @keyframes animateProjects{
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
     }
   }
 `;
