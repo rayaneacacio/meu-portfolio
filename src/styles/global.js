@@ -25,7 +25,7 @@ export default createGlobalStyle`
     }
 
     &::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.COLORS.PINK};
+      background: ${({ theme }) => theme.COLORS.PINK_300};
       border-radius: 8px;
     }
   }
@@ -59,12 +59,23 @@ export default createGlobalStyle`
     }
   }
 
-  @keyframes animateProjects{
+  @keyframes animateProjects {
     0% {
       transform: scale(1);
     }
     100% {
       transform: scale(1.2);
+    }
+  }
+
+  @keyframes visible {
+    from {
+      opacity: 0;
+      transform: translateY(-2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(2rem);
     }
   }
 `;

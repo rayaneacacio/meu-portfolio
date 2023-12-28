@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
-  color: ${({ theme }) => theme.COLORS.PINK};
+  color: ${({ theme }) => theme.COLORS.PINK_300};
   position: relative;
 
   header {
@@ -37,19 +37,15 @@ export const Container = styled.div`
   }
 
   nav ul, nav a {
-    color: ${({ theme }) => theme.COLORS.PINK};
+    color: ${({ theme }) => theme.COLORS.PINK_300};
     padding: 3.8rem 1rem;
-  }
-
-  nav ul:hover {
-    /* border-bottom: 3px solid ${({ theme }) => theme.COLORS.PINK} !important; */
   }
 
   nav a:hover, nav ul:hover {
     border-bottom: 3px solid transparent; 
   }
 
-  button {
+  /* button {
     background: ${({ theme }) => theme.COLORS.PINK};
     font-family: ${({ theme }) => theme.FONTS.MONTSERRAT};
     font-size: 1.7rem;
@@ -66,7 +62,7 @@ export const Container = styled.div`
     height: 5rem;
     text-align: end;
     padding: 1rem 2rem 0;
-  }
+  } */
 `;
 
 export const Main = styled.main`
@@ -98,13 +94,13 @@ export const Main = styled.main`
   }
 
   .icons_linguage {
+    color: ${({ theme }) => theme.COLORS.WHITE};
     display: flex;
     gap: 10rem;
-    /* margin-top: 5rem; */
   }
 
   .sobre_mim {
-    background: ${({ theme }) => theme.COLORS.PINK};
+    background: ${({ theme }) => theme.COLORS.PINK_300};
     color: ${({ theme }) => theme.COLORS.BACKGROUND};
     font-size: 1.8rem;
     text-align: center;
@@ -113,7 +109,6 @@ export const Main = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     gap: 5rem;
 
     padding: 10rem 0;
@@ -121,10 +116,30 @@ export const Main = styled.main`
     p {
       width: 50%;
     }
+
+    h2 {
+      color: ${({ theme }) => theme.COLORS.WHITE};
+    }
+
+    p, h2, div {
+      opacity: 0;
+    }
+  }
+
+  .flutuando {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0.5;
+
+    > span {
+      position: absolute;
+      cursor: none;
+    }
   }
 
   .projetos {
-    background: ${({ theme }) => theme.COLORS.BACKGROUND};
+    background: ${({ theme }) => theme.COLORS.GRAY};
     width: 90%;
     padding-top: 5rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -134,7 +149,11 @@ export const Main = styled.main`
 
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    gap: 7rem;
     flex-wrap: wrap;
+
+    > div {
+      opacity: 0;
+    }
   }
 `;

@@ -6,7 +6,6 @@ import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { FaNode } from "react-icons/fa";
 import { SiStyledcomponents } from "react-icons/si";
-import { FaHeart } from "react-icons/fa";
 
 import imgZer01Modas from "../../assets/zer01modas.jpeg";
 import imgFoodExplorer from "../../assets/foodexplorer.jpeg";
@@ -20,7 +19,6 @@ import { Container, Main } from "./style";
 export function Home() {
   function handleNavigateSections(section) {
     //para a scroll rolar ate a section escolhida;
-
     let div = (section.target.innerText).toLowerCase();
     div = div.replace(" ", "_");
 
@@ -28,55 +26,18 @@ export function Home() {
       top: (0, document.querySelector(`.${ div }`).offsetTop - 110),
       behavior: "smooth"
     });
-
-    // Array.from(document.querySelectorAll("ul")).map(ul => ul.style.border = "none");
-
-    // section.target.style.borderBottom = "3px solid #FEBED1";
   }
 
-  function scroller() {
+  window.addEventListener("scroll", () => {
+    //para mostrar a secao;
     Array.from(document.querySelectorAll("main > div")).map(div => {
-      if(div.offsetTop >= window.scrollY && div.offsetTop < window.scrollY+300) {
-        Array.from(document.querySelectorAll("ul")).map(ul => {
-          let section = div.className.toUpperCase();
-          section = section.replace("_", " ");
-          
-          if(ul.innerText == section) {
-            ul.style.borderBottom = "3px solid #FEBED1";
-          } else {
-            ul.style.border = "none";
-          }
-
-        });
-      }
+        if(window.scrollY >= div.offsetTop-400) {
+            Array.from(div.children).map(children => {
+            children.style.animation = "visible 1s forwards";
+          });
+        }
     });
-  }
-
-  // function menuStatus() {
-  //   console.log(menuAtivo)
-  //    if(!menuAtivo) {
-  //   window.addEventListener("scroll", scroller);
-  // } else {
-  //   window.removeEventListener("scroll", scroller);
-  // }
-  // }
-
-  // window.addEventListener("scroll", scroller);
-
-  // useEffect(() => {
-  //   console.log(menuAtivo)
-
-  //   if(!menuAtivo) {
-  //     window.addEventListener("scroll", scroller);
-  //   } else {
-  //     window.removeEventListener("scroll", scroller);
-  //   }
-
-  //   return () => {
-  //     window.removeEventListener("scroll", scroller);
-  //   }
-
-  // }, [ menuAtivo ]);
+  });
   
   return (
     <Container>
@@ -102,33 +63,33 @@ export function Home() {
             <h2>Oie! Eu sou </h2>
             <h1>Rayane Acácio,</h1>
             <h2>desenvolvedora web</h2>
-
-            {/* <button>
-              ENTRAR EM CONTATO
-            </button> */}
-
-            {/* <div className="icons_linguage">
-              <IoLogoJavascript size={ 70 } />
-              <FaReact size={ 70 } />
-              <FaNode size={ 70 }  />
-              <SiStyledcomponents size={ 35 } />
-            </div> */}
           </div>
 
           <img src="" alt="" />
         </div>
 
         <div className="sobre_mim">
-          <h2>Hello World :)</h2>
+          <h2>HELLO WORLD :)</h2>
 
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quidem officia vitae eligendi dolor, recusandae maiores, voluptates reiciendis amet, hic nulla! Esse natus repellat quia beatae quae doloremque quasi repudiandae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos molestiae possimus cum fugiat ipsam? Explicabo quasi molestias totam reprehenderit ut at dolore, facilis velit nesciunt officia minus ducimus ea eum.</p>
+          <p>
+            Tenho 19 anos e busco uma oportunidade para trabalhar com desenvolvimento frontend. Estou ansiosa para aplicar minha paixão e experiência com programação web em um ambiente que valoriza a aprendizagem contínua e a inovação
+          </p>
 
           <div className="icons_linguage">
-              <SiStyledcomponents size={ 100 } />
-              <IoLogoJavascript size={ 100 } />
-              <FaReact size={ 100 } />
-              <FaNode size={ 100 }  />
-            </div>
+            <SiStyledcomponents size={ 100 } />
+            <IoLogoJavascript size={ 100 } />
+            <FaReact size={ 100 } />
+            <FaNode size={ 100 }  />
+          </div>
+
+          <div className="flutuando">
+            <span style={{ top: "-18rem", left: "47rem", fontSize: "1.3rem" }}>VSCODE</span>
+            <span style={{ top: "-17rem", right: "51rem", fontSize: "1.4rem" }}>HTML5</span>
+            <span style={{ top: "-8rem", left: "30rem", fontSize: "1.4rem" }}>CSS3</span>
+            <span style={{ top: "-2rem", left: "53rem", fontSize: "1.5rem" }}>FIGMA</span>
+            <span style={{ top: "-5rem", left: "75rem", fontSize: "1.5rem" }}>WEB</span>
+            <span style={{ top: "-7rem", right: "36rem", fontSize: "1.5rem" }}>API</span>
+          </div>
         </div>
 
         <div className="projetos">

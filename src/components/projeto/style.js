@@ -16,10 +16,12 @@ export const Container = styled.div`
   justify-content: space-between;
   position: relative;
 
-  overflow: hidden;
+  /* overflow: hidden; */
 
   &:hover {
-    > :first-child {
+    overflow: hidden;
+
+    > :first-child, .mobile {
       animation: animateProjects 0.5s forwards;
       filter: blur(1px);
     }
@@ -46,7 +48,7 @@ export const Container = styled.div`
     /* transition: transform 5s ease reverse; */
   }
 
-  .firstDiv {
+  > :last-child {
     background: rgba(8, 8, 8, 0.64);
     /* background: linear-gradient(rgba(0, 0, 0, 0.1), ${({ theme }) => theme.COLORS.PINK}); */
     width: 100%;
@@ -75,4 +77,15 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
   }
+
+  /* .mobile {
+    background-size: cover;
+    width: 25%;
+    height: 70%;
+    position: absolute;
+    bottom: -1rem;
+    right: -2rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  } */
 `;
