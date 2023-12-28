@@ -130,7 +130,7 @@ export const Main = styled.main`
     width: 100%;
     height: 100%;
     position: relative;
-    opacity: 0.5;
+    opacity: 0.5 !important;
 
     > span {
       position: absolute;
