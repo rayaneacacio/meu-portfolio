@@ -19,15 +19,15 @@ export default createGlobalStyle`
     overflow-x: hidden;
     scroll-behavior: smooth;
 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
     &::-webkit-scrollbar {
       background: none;
-      width: 0.5rem;
+      display: none;
     }
 
-    &::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.COLORS.PINK_300};
-      border-radius: 8px;
-    }
+    //esconder a scroll
   }
 
   h1, h2 {
@@ -45,7 +45,7 @@ export default createGlobalStyle`
     filter: brightness(0.7);
   }
 
-  @keyframes inicio {
+  /* @keyframes inicio {
     from {
       opacity: 0;
       transform: translateY(-2rem);
@@ -57,7 +57,7 @@ export default createGlobalStyle`
       transform: translateY(2rem);
       transform: translateX(2rem);
     }
-  }
+  } */
 
   @keyframes animateProjects {
     0% {
@@ -71,11 +71,29 @@ export default createGlobalStyle`
   @keyframes visible {
     from {
       opacity: 0;
-      transform: translateY(-2rem);
+      transform: translateY(2rem);
     }
     to {
       opacity: 1;
-      transform: translateY(2rem);
+      transform: translateY(-2rem);
+    }
+  }
+
+  @media(min-width: 1000px) {
+    body {
+      scrollbar-width: auto;
+      -ms-overflow-style: auto;
+
+      &::-webkit-scrollbar {
+        /* display: ; */
+        background: none;
+        width: 0.5rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: ${({ theme }) => theme.COLORS.PINK_300};
+        border-radius: 8px;
+      }
     }
   }
 `;

@@ -49,7 +49,7 @@ export function Home() {
           <ul onClick={(event) => handleNavigateSections(event) } > HOME </ul>
           <ul onClick={(event) => handleNavigateSections(event) } > SOBRE MIM </ul>
           <ul onClick={(event) => handleNavigateSections(event) } > PROJETOS </ul>
-          <a href="#"> CURRÍCULO </a>
+          {/* <a href="#"> CURRÍCULO </a> */}
           <a href="https://www.instagram.com/rayaneakkacio/" target="_blank"> <FaSquareInstagram size={ 23 } /> </a>
           <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank"> <BsLinkedin size={ 23 } /> </a>
           <a href="https://github.com/rayaneacacio" target="_blank"> <FaGithub size={ 24 } /> </a>
@@ -63,9 +63,15 @@ export function Home() {
             <h2>Oie! Eu sou </h2>
             <h1>Rayane Acácio,</h1>
             <h2>desenvolvedora web</h2>
+
+            <div>
+              <button> <a href="#" target="_blank">CURRÍCULO</a> </button>
+              <button> <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank">LINKEDIN</a> </button>
+            </div>
           </div>
 
           <img src="" alt="" />
+
         </div>
 
         <div className="sobre_mim">
@@ -76,19 +82,19 @@ export function Home() {
           </p>
 
           <div className="icons_linguage">
-            <SiStyledcomponents size={ 100 } />
-            <IoLogoJavascript size={ 100 } />
-            <FaReact size={ 100 } />
-            <FaNode size={ 100 }  />
+            <SiStyledcomponents title="Styled Components" size={ 60 } />
+            <IoLogoJavascript title="JavaScript" size={ 60 } />
+            <FaReact title="React JS" size={ 60 } />
+            <FaNode title="Node JS" size={ 60 } />
           </div>
 
           <div className="flutuando">
-            <span style={{ top: "-18rem", left: "47rem", fontSize: "1.3rem" }}>VSCODE</span>
-            <span style={{ top: "-17rem", right: "51rem", fontSize: "1.4rem" }}>HTML5</span>
-            <span style={{ top: "-8rem", left: "30rem", fontSize: "1.4rem" }}>CSS3</span>
-            <span style={{ top: "-2rem", left: "53rem", fontSize: "1.5rem" }}>FIGMA</span>
-            <span style={{ top: "-5rem", left: "75rem", fontSize: "1.5rem" }}>WEB</span>
-            <span style={{ top: "-7rem", right: "36rem", fontSize: "1.5rem" }}>API</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-18rem" : "-3rem", left: window.innerWidth >= 1000 ? "47rem" : "4rem", fontSize: "1.3rem" }}>VSCODE</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-17rem" : "-2rem", right: window.innerWidth >= 1000 ? "51rem" : "3rem", fontSize: "1.4rem" }}>HTML5</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-8rem" : "-11rem", left: window.innerWidth >= 1000 ? "30rem" : "29rem", fontSize: "1.4rem" }}>CSS3</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-2rem" : "-1rem", left: window.innerWidth >= 1000 ? "53rem" : "19rem", fontSize: "1.5rem" }}>FIGMA</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-5rem" : "-13rem", left: window.innerWidth >= 1000 ? "75rem" : "-11rem", fontSize: "1.5rem" }}>WEB</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-7rem" : "-10rem", right: window.innerWidth >= 1000 ? "36rem" : "29rem", fontSize: "1.5rem" }}>API</span>
           </div>
         </div>
 

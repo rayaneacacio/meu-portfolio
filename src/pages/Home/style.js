@@ -8,15 +8,10 @@ export const Container = styled.div`
   header {
     background: ${({ theme }) => theme.COLORS.BACKGROUND};
     width: 100%;
-    height: 10rem;
     display: flex;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
-    padding: 2rem 15rem;
-
-    position: fixed;
-    top: 0;
-    z-index: 2;
+    padding: 2rem;
   }
 
   header > div {
@@ -32,30 +27,47 @@ export const Container = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
     font-weight: bold;
   }
 
   nav ul, nav a {
     color: ${({ theme }) => theme.COLORS.PINK_300};
-    padding: 3.8rem 1rem;
   }
 
   nav a:hover, nav ul:hover {
     border-bottom: 3px solid transparent; 
   }
 
-  /* button {
-    background: ${({ theme }) => theme.COLORS.PINK};
+  nav ul {
+    display: none;
+  }
+
+  button {
+    background: ${({ theme }) => theme.COLORS.PINK_300};
     font-family: ${({ theme }) => theme.FONTS.MONTSERRAT};
     font-size: 1.7rem;
     font-weight: bold;
     padding: 1rem 2rem;
-    border-radius: 8px;
+    border-radius: 3px;
     margin-top: 3rem;
+
+    > a {
+      color: ${({ theme }) => theme.COLORS.BACKGROUND};
+    }
   }
 
-  footer {
+  button:last-of-type {
+    background: none;
+    border: 1px solid ${({ theme }) => theme.COLORS.PINK_300};
+    margin-left: 1rem;
+
+    > a {
+      color: ${({ theme }) => theme.COLORS.PINK_300};
+    }
+  }
+
+  /* footer {
     background: ${({ theme }) => theme.COLORS.PINK};
     color: ${({ theme }) => theme.COLORS.WHITE};
     width: 100%;
@@ -63,6 +75,29 @@ export const Container = styled.div`
     text-align: end;
     padding: 1rem 2rem 0;
   } */
+
+  @media(min-width: 1000px) {
+    header {
+      height: 10rem;
+      position: fixed;
+      top: 0;
+      z-index: 2;
+      padding: 2rem 15rem;
+    }
+
+    nav {
+      gap: 2rem;
+    }
+
+    nav ul {
+      display: block;
+    }
+
+    nav ul, nav a {
+      color: ${({ theme }) => theme.COLORS.PINK_300};
+      padding: 3.8rem 1rem;
+    }
+  }
 `;
 
 export const Main = styled.main`
@@ -72,15 +107,14 @@ export const Main = styled.main`
   justify-content: center;
   overflow-y: auto;
 
-  > div {
-    height: 80rem;
-  }
-
   .home {
     width: 80%;
+    height: calc(100vh - 10rem);
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5rem;
 
     img {
       width: 30rem;
@@ -89,32 +123,29 @@ export const Main = styled.main`
     }
 
     > :first-child {
-      animation: inicio 1s forwards;
+      text-align: center;
     }
   }
 
   .icons_linguage {
     color: ${({ theme }) => theme.COLORS.WHITE};
     display: flex;
-    gap: 10rem;
+    gap: 3rem;
+    margin: 2rem 0;
   }
 
   .sobre_mim {
-    background: ${({ theme }) => theme.COLORS.PINK_300};
-    color: ${({ theme }) => theme.COLORS.BACKGROUND};
     font-size: 1.8rem;
-    text-align: center;
+    text-align: justify;
     width: 100%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5rem;
-
-    padding: 10rem 0;
 
     p {
-      width: 50%;
+      width: 100%;
+      padding: 3rem;
     }
 
     h2 {
@@ -139,12 +170,7 @@ export const Main = styled.main`
   }
 
   .projetos {
-    background: ${({ theme }) => theme.COLORS.GRAY};
-    width: 90%;
     padding-top: 5rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    border-radius: 30px;
-    margin-top: -20rem;
     margin-bottom: 20rem;
 
     display: flex;
@@ -154,6 +180,52 @@ export const Main = styled.main`
 
     > div {
       opacity: 0;
+    }
+  }
+
+  @media(min-width: 1000px) {
+    > div {
+      height: 80rem !important;
+    }
+
+    .home {
+      flex-direction: row;
+      justify-content: space-around;
+
+      > :first-child {
+        text-align: left;
+      }
+    }
+
+    .sobre_mim {
+      background: ${({ theme }) => theme.COLORS.PINK_300};
+      color: ${({ theme }) => theme.COLORS.BACKGROUND};
+      text-align: center;
+      padding: 10rem 0;
+      gap: 5rem;
+
+      p {
+        width: 50%;
+        padding: 0;
+      }
+    }
+
+    .icons_linguage {
+      gap: 10rem;
+      margin: 0;
+
+      svg {
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+
+    .projetos {
+      background: ${({ theme }) => theme.COLORS.GRAY};
+      width: 90%;
+      border-radius: 30px;
+      margin-top: -20rem;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     }
   }
 `;
