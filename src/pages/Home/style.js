@@ -123,6 +123,7 @@ export const Main = styled.main`
   align-items: center;
   justify-content: center;
   overflow-y: auto;
+  overflow-x: hidden;
 
   .home {
     background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
