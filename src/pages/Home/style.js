@@ -6,12 +6,13 @@ export const Container = styled.div`
   position: relative;
 
   header {
-    background: ${({ theme }) => theme.COLORS.BACKGROUND};
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
     width: 100%;
     display: flex;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
     padding: 2rem;
+    border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY};
   }
 
   header > div {
@@ -67,14 +68,18 @@ export const Container = styled.div`
     }
   }
 
-  /* footer {
-    background: ${({ theme }) => theme.COLORS.PINK};
+  footer {
+    background: ${({ theme }) => theme.COLORS.PINK_300};
     color: ${({ theme }) => theme.COLORS.WHITE};
     width: 100%;
     height: 5rem;
     text-align: end;
     padding: 1rem 2rem 0;
-  } */
+  }
+
+  .blank {
+    opacity: 1 !important;
+  }
 
   @media(min-width: 1000px) {
     header {
@@ -108,13 +113,17 @@ export const Main = styled.main`
   overflow-y: auto;
 
   .home {
-    width: 80%;
-    height: calc(100vh - 10rem);
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     gap: 5rem;
+
+    animation: visible 1s forwards;
 
     img {
       width: 30rem;
@@ -124,6 +133,15 @@ export const Main = styled.main`
 
     > :first-child {
       text-align: center;
+    }
+
+    > :last-child {
+      background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
+      width: 100%;
+      height: 35px;
+      position: absolute;
+      bottom: -1rem;
+      transform: skew(-82deg, 10deg);
     }
   }
 
@@ -135,13 +153,19 @@ export const Main = styled.main`
   }
 
   .sobre_mim {
+    color: ${({ theme }) => theme.COLORS.PINK_200};
     font-size: 1.8rem;
     text-align: justify;
     width: 100%;
+    margin-bottom: 3rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+
+    padding-bottom: 2rem;
+    /* border-bottom: 0.1px solid ${({ theme }) => theme.COLORS.WHITE}; */
 
     p {
       width: 100%;
@@ -155,9 +179,19 @@ export const Main = styled.main`
     p, h2, div {
       opacity: 0;
     }
+
+    > :last-child {
+      background: ${({ theme }) => theme.COLORS.BACKGROUND};
+      width: 200%;
+      height: 30px;
+      transform: rotateZ(-3deg);
+      position: absolute;
+      bottom: -3rem;
+    }
   }
 
   .flutuando {
+    /* color: ${({ theme }) => theme.COLORS.GRAY}; */
     width: 100%;
     height: 100%;
     position: relative;
@@ -170,8 +204,9 @@ export const Main = styled.main`
   }
 
   .projetos {
+    background: ${({ theme }) => theme.COLORS.PURPLE};
     padding-top: 5rem;
-    margin-bottom: 20rem;
+    padding-bottom: 20rem;
 
     display: flex;
     justify-content: center;
@@ -203,6 +238,7 @@ export const Main = styled.main`
       text-align: center;
       padding: 10rem 0;
       gap: 5rem;
+      margin: 0;
 
       p {
         width: 50%;

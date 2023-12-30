@@ -45,20 +45,6 @@ export default createGlobalStyle`
     filter: brightness(0.7);
   }
 
-  /* @keyframes inicio {
-    from {
-      opacity: 0;
-      transform: translateY(-2rem);
-      transform: translateX(-2rem);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(2rem);
-      transform: translateX(2rem);
-    }
-  } */
-
   @keyframes animateProjects {
     0% {
       transform: scale(1);
@@ -71,18 +57,18 @@ export default createGlobalStyle`
   @keyframes visible {
     from {
       opacity: 0;
-      transform: translateY(2rem);
+      transform: translateY(-2rem);
     }
     to {
       opacity: 1;
-      transform: translateY(-2rem);
+      transform: translateY(0);
     }
   }
 
   @media(min-width: 1000px) {
     body {
-      scrollbar-width: auto;
-      -ms-overflow-style: auto;
+      /* scrollbar-width: auto; */
+      /* -ms-overflow-style: auto; */
 
       &::-webkit-scrollbar {
         /* display: ; */

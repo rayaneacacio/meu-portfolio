@@ -28,12 +28,17 @@ export function Home() {
     });
   }
 
+  function handleMenu() {}
+
   window.addEventListener("scroll", () => {
     //para mostrar a secao;
     Array.from(document.querySelectorAll("main > div")).map(div => {
-        if(window.scrollY >= div.offsetTop-400) {
-            Array.from(div.children).map(children => {
-            children.style.animation = "visible 1s forwards";
+        if(window.scrollY >= div.offsetTop-400 && div.className != "home") {
+          Array.from(div.children).map(children => {
+            if(children.className != "blank") {
+              children.style.animation = "visible 1s forwards";
+            }
+            
           });
         }
     });
@@ -43,7 +48,7 @@ export function Home() {
     <Container>
 
       <header>
-        <img src={ icondev } alt="" />
+        <img onClick={ handleMenu } src={ icondev } alt="" />
 
         <nav>
           <ul onClick={(event) => handleNavigateSections(event) } > HOME </ul>
@@ -72,6 +77,7 @@ export function Home() {
 
           <img src="" alt="" />
 
+          <div></div>
         </div>
 
         <div className="sobre_mim">
@@ -96,6 +102,8 @@ export function Home() {
             <span style={{ top: window.innerWidth >= 1000 ? "-5rem" : "-13rem", left: window.innerWidth >= 1000 ? "75rem" : "-11rem", fontSize: "1.5rem" }}>WEB</span>
             <span style={{ top: window.innerWidth >= 1000 ? "-7rem" : "-10rem", right: window.innerWidth >= 1000 ? "36rem" : "29rem", fontSize: "1.5rem" }}>API</span>
           </div>
+
+          <div className="blank"></div>
         </div>
 
         <div className="projetos">
