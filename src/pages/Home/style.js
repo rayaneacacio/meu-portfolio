@@ -13,11 +13,7 @@ export const Container = styled.div`
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
     padding: 2rem;
     border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY};
-  }
-
-  header > div {
-    display: flex;
-    gap: 1rem;
+    position: relative;
   }
 
   header > img {
@@ -79,6 +75,22 @@ export const Container = styled.div`
 
   .blank {
     opacity: 1 !important;
+  }
+
+  .menuMobile {
+    background: rgba(8, 8, 8, 0.64);
+    font-size: 1.7rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-left: -2rem;
+
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+
+    position: absolute;
+    bottom: -8rem;
+    z-index: 1;
   }
 
   @media(min-width: 1000px) {

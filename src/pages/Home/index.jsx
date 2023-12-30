@@ -28,7 +28,17 @@ export function Home() {
     });
   }
 
-  function handleMenu() {}
+  function handleMenu() {
+    const menuMobile = document.querySelector(".menuMobile");
+
+    if(menuMobile.style.display == "none") {
+      menuMobile.style.display = "flex";
+      menuMobile.style.animation = "menuAnimation 0.3s forwards"; 
+    } else {
+      menuMobile.style.display = "none";
+      menuMobile.style.animation = "menuAnimation 0.3s forwards reverse"; 
+    }
+  }
 
   window.addEventListener("scroll", () => {
     //para mostrar a secao;
@@ -49,6 +59,11 @@ export function Home() {
 
       <header>
         <img onClick={ handleMenu } src={ icondev } alt="" />
+
+        <div className="menuMobile">
+          <ul onClick={(event) => handleNavigateSections(event) } > SOBRE MIM </ul>
+          <ul onClick={(event) => handleNavigateSections(event) } > PROJETOS </ul>
+        </div>
 
         <nav>
           <ul onClick={(event) => handleNavigateSections(event) } > HOME </ul>

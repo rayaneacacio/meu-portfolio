@@ -8,12 +8,12 @@ export default {
     // PINK_200: "#fdc7b8",
     // PINK_250: "#eeb4aa",
     // PURPLE: "#443d44",
-    PURPLE: "#b199b1",
+    PURPLE: "#d6909b",
 
     BLUE: "#d9c5c5",
 
     BACKGROUND: "#171717",
-    BACKGROUND_2: "#443d44",
+    BACKGROUND_2: "hsl(0, 0%, 5%);",
     GRAY: "rgb(25, 25, 25)",
 
     WHITE: "#FFF",

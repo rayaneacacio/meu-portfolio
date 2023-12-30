@@ -65,6 +65,15 @@ export default createGlobalStyle`
     }
   }
 
+  @keyframes menuAnimation {
+    from {
+      transform: translateY(-5rem);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
   @media(min-width: 1000px) {
     body {
       /* scrollbar-width: auto; */
