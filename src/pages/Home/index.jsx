@@ -90,7 +90,16 @@ export function Home() {
             </div>
           </div>
 
-          <img src="" alt="" />
+          {/* <img src="" alt="" /> */}
+          <div className="divImg">
+            <img src="" alt="" />
+            {/* <div> ˑ  ぅ ་ ᳝ ◝ 𖥻 ࣪ ▸ ˖ꜝꜞ ᳝ ࣪ ִֶָ ◞✶ ⊹ ᨘ໑. ࣪𖣠˖</div> */}
+            <span style={{ left: "3rem", top: "6rem" }}>𖥔</span>
+            <span style={{ bottom: "2rem", right: "3rem" }}> ִᥫ᭡ ˖</span>
+            <span style={{ right: "-3rem", top: "10rem" }}>࣪ ‹ 𖥔 ࣪ ˖</span>
+            <span style={{ left: "3rem", bottom: "5rem" }}>ִֶָ 𖥔ִ ་ ، </span>
+            <span style={{ bottom: "-1rem" }}> ♡ ⊹</span>
+          </div>
 
           <div></div>
         </div>

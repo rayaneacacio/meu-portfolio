@@ -118,6 +118,7 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.main`
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,7 +135,7 @@ export const Main = styled.main`
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
+    gap: 2rem;
 
     animation: visible 1s forwards;
 
@@ -155,6 +156,18 @@ export const Main = styled.main`
       position: absolute;
       bottom: -1rem;
       transform: skew(-82deg, 10deg);
+    }
+  }
+
+  .divImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+
+    span {
+      position: absolute;
     }
   }
 
