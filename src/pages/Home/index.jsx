@@ -8,7 +8,9 @@ import { FaNode } from "react-icons/fa";
 import { SiStyledcomponents } from "react-icons/si";
 
 import imgZer01Modas from "../../assets/zer01modas.jpeg";
+import imgZer01Modas_mobile from "../../assets/zer01modas_mobile.jpeg";
 import imgFoodExplorer from "../../assets/foodexplorer.jpeg";
+import imgFoodExplorer_mobile from "../../assets/foodexplorer_mobile.jpeg";
 import imgRocketMovies from "../../assets/rocketmovies.jpeg";
 import icondev from "../../assets/devicon.svg";
 
@@ -101,7 +103,7 @@ export function Home() {
             <span style={{ bottom: "-1rem" }}> ♡ ⊹</span>
           </div>
 
-          <div></div>
+          <div className="blank"></div>
         </div>
 
         <div className="sobre_mim">
@@ -131,8 +133,8 @@ export function Home() {
         </div>
 
         <div className="projetos">
-          <Projeto img={ imgZer01Modas } name="Zer01 Modas" description="site de vendas responsivo" repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app" />
-          <Projeto img={ imgFoodExplorer } name="Food Explorer" description="Menu interativo para um restaurante" repository="https://github.com/rayaneacacio/food-explorer" deploy="https://sparkly-pavlova-9f4ab9.netlify.app/" />
+          <Projeto img={ imgZer01Modas } img_mobile={ imgZer01Modas_mobile } name="Zer01 Modas" description="site de vendas responsivo" repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app" />
+          <Projeto img={ imgFoodExplorer } img_mobile={ imgFoodExplorer_mobile } name="Food Explorer" description="Menu interativo para um restaurante" repository="https://github.com/rayaneacacio/food-explorer" deploy="https://sparkly-pavlova-9f4ab9.netlify.app/" />
           <Projeto img={ imgRocketMovies } name="Rocket Movies" description="site para favoritar filmes" repository="https://github.com/rayaneacacio/rocket-movies" deploy="https://main--reactrocketmovies.netlify.app/" />
         </div>
       </Main>

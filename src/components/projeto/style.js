@@ -4,7 +4,6 @@ export const Container = styled.div`
   color: ${({ theme }) => theme.COLORS.WHITE};
   width: 30rem;
   height: 20rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   font-size: 1.8rem;
   border-radius: 5px;
 
@@ -31,9 +30,10 @@ export const Container = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 95%;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   }
 
   > :last-child {
@@ -68,16 +68,16 @@ export const Container = styled.div`
     }
   }
 
-  /* .mobile {
+  .mobile {
     background-size: cover;
     width: 25%;
     height: 70%;
     position: absolute;
-    bottom: -1rem;
-    right: -2rem;
+    bottom: 0;
+    right: 0;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  } */
+  }
 
   @media(min-width: 1000px) {
     width: 50rem;

@@ -23,21 +23,23 @@ export default createGlobalStyle`
     -ms-overflow-style: none;
 
     &::-webkit-scrollbar {
-      background: none;
+      background: transparent;
+      width: none;
       display: none;
     }
-
-    //esconder a scroll
   }
 
   h1, h2 {
     font-family: ${({ theme }) => theme.FONTS.MONTSERRAT};
   }
 
-  button, a, ul {
+  button, ul {
     background: none;
     cursor: pointer;
     transition: filter 0.2s;
+  }
+
+  a {
     text-decoration: none;
   }
 
@@ -76,17 +78,16 @@ export default createGlobalStyle`
 
   @media(min-width: 1000px) {
     body {
-      /* scrollbar-width: auto; */
-      /* -ms-overflow-style: auto; */
+      background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
 
       &::-webkit-scrollbar {
-        /* display: ; */
+        display: block;
         background: none;
         width: 0.5rem;
       }
 
       &::-webkit-scrollbar-thumb {
-        background: ${({ theme }) => theme.COLORS.PINK_300};
+        background: ${({ theme }) => theme.COLORS.WHITE};
         border-radius: 8px;
       }
     }

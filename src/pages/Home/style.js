@@ -50,12 +50,12 @@ export const Container = styled.div`
     margin-top: 3rem;
 
     > a {
-      color: ${({ theme }) => theme.COLORS.BACKGROUND};
+      color: ${({ theme }) => theme.COLORS.WHITE};
     }
   }
 
   button:last-of-type {
-    background: none;
+    background: ${({ theme }) => theme.COLORS.WHITE};;
     border: 1px solid ${({ theme }) => theme.COLORS.PINK_300};
     margin-left: 1rem;
 
@@ -100,6 +100,7 @@ export const Container = styled.div`
       top: 0;
       z-index: 2;
       padding: 2rem 15rem;
+      border: none;
     }
 
     nav {
@@ -113,6 +114,10 @@ export const Container = styled.div`
     nav ul, nav a {
       color: ${({ theme }) => theme.COLORS.PINK_300};
       padding: 3.8rem 1rem;
+    }
+
+    .blank {
+      display: none;
     }
   }
 `;
@@ -191,7 +196,6 @@ export const Main = styled.main`
     position: relative;
 
     padding-bottom: 2rem;
-    /* border-bottom: 0.1px solid ${({ theme }) => theme.COLORS.WHITE}; */
 
     p {
       width: 100%;
@@ -217,7 +221,6 @@ export const Main = styled.main`
   }
 
   .flutuando {
-    /* color: ${({ theme }) => theme.COLORS.GRAY}; */
     width: 100%;
     height: 100%;
     position: relative;
@@ -250,8 +253,8 @@ export const Main = styled.main`
     }
 
     .home {
-      flex-direction: row;
-      justify-content: space-around;
+      flex-direction: row-reverse;
+      /* justify-content: space-around; */
 
       > :first-child {
         text-align: left;
@@ -265,6 +268,7 @@ export const Main = styled.main`
       padding: 10rem 0;
       gap: 5rem;
       margin: 0;
+      position: static;
 
       p {
         width: 50%;
@@ -283,7 +287,7 @@ export const Main = styled.main`
     }
 
     .projetos {
-      background: ${({ theme }) => theme.COLORS.GRAY};
+      background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
       width: 90%;
       border-radius: 30px;
       margin-top: -20rem;
