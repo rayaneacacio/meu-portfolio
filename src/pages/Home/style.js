@@ -52,6 +52,10 @@ export const Container = styled.div`
     > a {
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
+
+    a:hover {
+      filter: none;
+    }
   }
 
   button:last-of-type {
@@ -144,11 +148,11 @@ export const Main = styled.main`
 
     animation: visible 1s forwards;
 
-    img {
+    /* img {
       width: 30rem;
       height: 30rem;
       border-radius: 50%;
-    }
+    } */
 
     > :first-child {
       text-align: center;
@@ -170,6 +174,13 @@ export const Main = styled.main`
     align-items: center;
     gap: 2rem;
     position: relative;
+
+    > :first-child {
+      width: 30rem;
+      height: 30rem;
+      border-radius: 50%;
+      background-size: cover;
+    }
 
     span {
       position: absolute;

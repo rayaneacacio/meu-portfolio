@@ -14,6 +14,10 @@ export function Projeto({ img, img_mobile, name, description, repository, deploy
       
       <div>
         <p> { description } </p>
+        <div style={{ display: "flex", gap: "2rem" }}>
+          <span>JAVASCRIPT</span>
+          <span>REACT</span>
+        </div>
 
         <div className="div_links">
           <a href={ repository } target="_blank" title="repositório" > <FaGithub size={ 40 } /> </a>

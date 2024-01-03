@@ -7,6 +7,7 @@ import { FaReact } from "react-icons/fa";
 import { FaNode } from "react-icons/fa";
 import { SiStyledcomponents } from "react-icons/si";
 
+import minha_foto from "../../assets/eu.png";
 import imgZer01Modas from "../../assets/zer01modas.jpeg";
 import imgZer01Modas_mobile from "../../assets/zer01modas_mobile.jpeg";
 import imgFoodExplorer from "../../assets/foodexplorer.jpeg";
@@ -87,18 +88,17 @@ export function Home() {
             <h2>desenvolvedora web</h2>
 
             <div>
-              <button> <a href="#" target="_blank">CURRÍCULO</a> </button>
+              <button> <a href="https://drive.google.com/file/d/1u5zV9TBfF_C59MgGcvwebeZmfYMR3uWl/view?usp=sharing" target="_blank">CERTIFICADO</a> </button>
               <button> <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank">LINKEDIN</a> </button>
             </div>
           </div>
 
-          {/* <img src="" alt="" /> */}
           <div className="divImg">
-            <img src="" alt="" />
+            <div style={{ backgroundImage: `url(${ minha_foto })` }} ></div>
             {/* <div> ˑ  ぅ ་ ᳝ ◝ 𖥻 ࣪ ▸ ˖ꜝꜞ ᳝ ࣪ ִֶָ ◞✶ ⊹ ᨘ໑. ࣪𖣠˖</div> */}
             <span style={{ left: "3rem", top: "6rem" }}>𖥔</span>
             <span style={{ bottom: "2rem", right: "3rem" }}> ִᥫ᭡ ˖</span>
-            <span style={{ right: "-3rem", top: "10rem" }}>࣪ ‹ 𖥔 ࣪ ˖</span>
+            <span style={{ right: "-2rem", top: "10rem" }}>࣪ ‹ 𖥔 ࣪ ˖</span>
             <span style={{ left: "3rem", bottom: "5rem" }}>ִֶָ 𖥔ִ ་ ، </span>
             <span style={{ bottom: "-1rem" }}> ♡ ⊹</span>
           </div>
