@@ -69,10 +69,12 @@ export default createGlobalStyle`
 
   @keyframes menuAnimation {
     from {
-      transform: translateY(-1rem);
+      transform: translateY(-0.5rem);
+      opacity: 0;
     }
     to {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 
