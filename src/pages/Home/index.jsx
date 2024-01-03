@@ -34,12 +34,16 @@ export function Home() {
   function handleMenu() {
     const menuMobile = document.querySelector(".menuMobile");
 
-    if(menuMobile.style.display == "none") {
-      menuMobile.style.display = "flex";
-      menuMobile.style.animation = "menuAnimation 0.3s forwards"; 
+    if(window.innerWidth >= 1000) {
+      return;
     } else {
-      menuMobile.style.display = "none";
-      menuMobile.style.animation = "menuAnimation 0.3s forwards reverse"; 
+      if(menuMobile.style.display == "none") {
+        menuMobile.style.display = "flex";
+        menuMobile.style.animation = "menuAnimation 0.3s forwards"; 
+      } else {
+        menuMobile.style.display = "none";
+        menuMobile.style.animation = "menuAnimation 0.3s forwards reverse"; 
+      }
     }
   }
 
