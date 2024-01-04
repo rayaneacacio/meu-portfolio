@@ -114,7 +114,7 @@ export function Home() {
           <h2>HELLO WORLD :)</h2>
 
           <p>
-            Tenho 19 anos e busco uma oportunidade para trabalhar com desenvolvimento frontend. Estou ansiosa para aplicar minha paixão e experiência com programação web em um ambiente que valoriza a aprendizagem contínua e a inovação
+            Tenho 19 anos, sou programadora frontend e estou há 3 anos estudando desenvolvimento web. Tenho habilidades em JavaScript, React, Styled Components e Node. Já trabalhei em vários projetos, incluindo um e-commerce fullstack e menu interativo com banco de dados sqlite
           </p>
 
           <div className="icons_linguage">
