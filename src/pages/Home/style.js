@@ -275,6 +275,7 @@ export const Main = styled.main`
       flex-direction: column;
       align-items: center;
       gap: 2rem;
+      padding-bottom: 15rem;
     }
 
     button {
@@ -282,7 +283,6 @@ export const Main = styled.main`
       font-size: 2rem;
       border: none;
       border-bottom: 2px solid ${({ theme }) => theme.COLORS.BACKGROUND_2};
-      /* margin: 0; */
 
       a {
         color: ${({ theme }) => theme.COLORS.WHITE};
@@ -294,7 +294,7 @@ export const Main = styled.main`
     }
 
     a {
-      color: ${({ theme }) => theme.COLORS.BACKGROUND_2};
+      color: ${({ theme }) => theme.COLORS.WHITE};
     }
   }
 
