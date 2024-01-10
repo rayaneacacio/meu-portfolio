@@ -7,6 +7,7 @@ import { FaReact } from "react-icons/fa";
 import { FaNode } from "react-icons/fa";
 import { SiStyledcomponents } from "react-icons/si";
 import { IoMdMail } from "react-icons/io";
+import { FaHeart } from "react-icons/fa6";
 
 import minha_foto from "../../assets/eu.png";
 import imgZer01Modas from "../../assets/zer01modas.jpeg";
@@ -53,11 +54,22 @@ export function Home() {
     Array.from(document.querySelectorAll("main > div")).map(div => {
         if(window.scrollY >= div.offsetTop-400 && div.className != "home") {
           Array.from(div.children).map(children => {
+
             if(children.className != "blank") {
-              children.style.animation = "visible 1s forwards";
+              if(children != document.querySelector("footer")) {
+                children.style.animation = "visible 1s forwards";
+              }
             }
-            
           });
+
+          if(div.className == "contato") {
+            document.querySelector(".borderEmail").style.animation = "toRigth 2s forwards";
+
+            const divRedesSociais = div.querySelector(".divRedesSociais");
+            divRedesSociais.style.animation = "contatosAnimation 0.5s forwards";
+            divRedesSociais.style.animationDelay = "1s";
+          }
+
         }
     });
   });
@@ -150,9 +162,12 @@ export function Home() {
 
           <div>
             <h2>FALE COMIGO</h2>
-            <button> <a href="mailto:rray74307@gmail.com"> <IoMdMail /> rray74307@gmail.com</a> </button>
+            <button>
+              <a href="mailto:rray74307@gmail.com"> <IoMdMail /> rray74307@gmail.com</a>
+              <div className="borderEmail" style={{ height: "2px", background: "#36344b" }}></div>
+            </button>
 
-            <div style={{ display: "flex", gap: "4rem" }}>
+            <div className="divRedesSociais" style={{ display: "flex", gap: "4rem", opacity: "0" }}>
               <a href="https://www.instagram.com/rayaneakkacio/" target="_blank"> <FaSquareInstagram size={ 30 } /> </a>
               <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank"> <BsLinkedin size={ 30 } /> </a>
               <a href="https://github.com/rayaneacacio" target="_blank"> <FaGithub size={ 30 } /> </a>
@@ -161,7 +176,7 @@ export function Home() {
           </div>
 
           <footer>
-            © 2024 | 💜 by Rayane Acácio
+            © 2024 | ❤ by Rayane Acácio
           </footer>
         </div>
       </Main>

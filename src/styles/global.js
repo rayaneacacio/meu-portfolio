@@ -78,6 +78,28 @@ export default createGlobalStyle`
     }
   }
 
+  @keyframes toRigth {
+    from {
+      opacity: 0;
+      width: 0;
+    }
+    to {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  @keyframes contatosAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @media(min-width: 1000px) {
     body {
       background: ${({ theme }) => theme.COLORS.BACKGROUND_2};

@@ -75,7 +75,7 @@ export const Container = styled.div`
     font-size: 1.5rem;
     width: 100%;
     height: 5rem;
-    padding: 1rem 2rem 5rem;
+    padding: 1rem 2rem 8rem;
   }
 
   .blank {
@@ -192,7 +192,6 @@ export const Main = styled.main`
 
   .sobre_mim {
     color: ${({ theme }) => theme.COLORS.PINK_200};
-    /* font-size: 1.8rem; */
     text-align: justify;
     width: 100%;
     margin-bottom: 3rem;
@@ -258,8 +257,13 @@ export const Main = styled.main`
     background-color: ${({ theme }) => theme.COLORS.BLUE};
     color: ${({ theme }) => theme.COLORS.BACKGROUND_2};
     width: 100%;
+    height: 80vh;
     position: relative;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
     > :first-child {
       background-color: ${({ theme }) => theme.COLORS.BLUE};
@@ -275,14 +279,14 @@ export const Main = styled.main`
       flex-direction: column;
       align-items: center;
       gap: 2rem;
-      padding-bottom: 15rem;
+      opacity: 0;
     }
 
     button {
       background: none;
       font-size: 2rem;
       border: none;
-      border-bottom: 2px solid ${({ theme }) => theme.COLORS.BACKGROUND_2};
+      padding: 0;
 
       a {
         color: ${({ theme }) => theme.COLORS.WHITE};
@@ -290,6 +294,7 @@ export const Main = styled.main`
         align-items: center;
         justify-content: center;
         gap: 1rem;
+        padding: 1rem 2rem;
       }
     }
 
