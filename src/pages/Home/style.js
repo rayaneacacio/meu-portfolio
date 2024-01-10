@@ -7,7 +7,7 @@ export const Container = styled.div`
   position: relative;
 
   header {
-    background: transparent;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -70,12 +70,12 @@ export const Container = styled.div`
   }
 
   footer {
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
-    color: ${({ theme }) => theme.COLORS.GREEN};
+    background: ${({ theme }) => theme.COLORS.BACKGROUND};
+    color: ${({ theme }) => theme.COLORS.YELLOW};
     font-size: 1.5rem;
     width: 100%;
     height: 5rem;
-    padding: 3rem 2rem 8rem;
+    padding: 3rem 2rem 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,6 +105,7 @@ export const Container = styled.div`
 
   @media(min-width: 1000px) {
     header {
+      background: transparent;
       height: 10rem;
       position: fixed;
       top: 0;
@@ -141,6 +142,7 @@ export const Main = styled.main`
     color: ${({ theme }) => theme.COLORS.WHITE};
     width: 100%;
     height: 100vh;
+    padding-bottom: 5rem;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
