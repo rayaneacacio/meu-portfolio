@@ -11,7 +11,7 @@ export default {
     // PURPLE: "#d6909b",
     PURPLE: "#dc8fad",
 
-    BLUE: "#d9c5c5",
+    // BLUE: "#d9c5c5",
 
     BACKGROUND: "#171717",
     // BACKGROUND_2: "hsl(0, 0%, 5%);",
@@ -21,6 +21,9 @@ export default {
     GRAY: "rgb(25, 25, 25)",
 
     WHITE: "#FFF",
+
+    GREEN: "#a1eacd",
+    BLUE: "#7689d8",
 
     // #b75975
   },

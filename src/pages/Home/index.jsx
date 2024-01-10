@@ -6,6 +6,7 @@ import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { FaNode } from "react-icons/fa";
 import { SiStyledcomponents } from "react-icons/si";
+import { IoMdMail } from "react-icons/io";
 
 import minha_foto from "../../assets/eu.png";
 import imgZer01Modas from "../../assets/zer01modas.jpeg";
@@ -70,12 +71,14 @@ export function Home() {
         <div className="menuMobile">
           <ul onClick={(event) => handleNavigateSections(event) } > SOBRE MIM </ul>
           <ul onClick={(event) => handleNavigateSections(event) } > PROJETOS </ul>
+          <ul onClick={(event) => handleNavigateSections(event) } > CONTATO </ul>
         </div>
 
         <nav>
           <ul onClick={(event) => handleNavigateSections(event) } > HOME </ul>
           <ul onClick={(event) => handleNavigateSections(event) } > SOBRE MIM </ul>
           <ul onClick={(event) => handleNavigateSections(event) } > PROJETOS </ul>
+          <ul onClick={(event) => handleNavigateSections(event) } > CONTATO </ul>
           {/* <a href="#"> CURRÍCULO </a> */}
           <a href="https://www.instagram.com/rayaneakkacio/" target="_blank"> <FaSquareInstagram size={ 23 } /> </a>
           <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank"> <BsLinkedin size={ 23 } /> </a>
@@ -89,7 +92,7 @@ export function Home() {
           <div>
             <h2>Oie! Eu sou </h2>
             <h1>Rayane Acácio,</h1>
-            <h2>desenvolvedora web</h2>
+            <h2 style={{ color: "#a1eacd" }}>desenvolvedora web</h2>
 
             <div>
               <button> <a href="https://drive.google.com/file/d/1u5zV9TBfF_C59MgGcvwebeZmfYMR3uWl/view?usp=sharing" target="_blank">CERTIFICADO</a> </button>
@@ -114,7 +117,7 @@ export function Home() {
           <h2>HELLO WORLD :)</h2>
 
           <p>
-            Tenho 19 anos, sou programadora frontend e estou há 3 anos estudando desenvolvimento web. Tenho habilidades em JavaScript, React, Styled Components e Node. Já trabalhei em vários projetos, incluindo um e-commerce fullstack e menu interativo com banco de dados sqlite
+            Tenho 19 anos, sou programadora frontend e estou estudando desenvolvimento web. Tenho habilidades em JavaScript, React, Styled Components e Node. Já trabalhei em vários projetos, incluindo um e-commerce fullstack e um menu interativo com banco de dados sqlite
           </p>
 
           <div className="icons_linguage">
@@ -140,6 +143,26 @@ export function Home() {
           <Projeto img={ imgZer01Modas } img_mobile={ imgZer01Modas_mobile } name="Zer01 Modas" description="site de vendas responsivo" repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app" />
           <Projeto img={ imgFoodExplorer } img_mobile={ imgFoodExplorer_mobile } name="Food Explorer" description="Menu interativo para um restaurante" repository="https://github.com/rayaneacacio/food-explorer" deploy="https://sparkly-pavlova-9f4ab9.netlify.app/" />
           <Projeto img={ imgRocketMovies } name="Rocket Movies" description="site para favoritar filmes" repository="https://github.com/rayaneacacio/rocket-movies" deploy="https://main--reactrocketmovies.netlify.app/" />
+        </div>
+        
+        <div className="contato">
+          <div className="blank"></div>
+
+          <div>
+            <h2>FALE COMIGO</h2>
+            <button> <a href="mailto:rray74307@gmail.com"> <IoMdMail /> rray74307@gmail.com</a> </button>
+
+            <div style={{ display: "flex", gap: "4rem" }}>
+              <a href="https://www.instagram.com/rayaneakkacio/" target="_blank"> <FaSquareInstagram size={ 30 } /> </a>
+              <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank"> <BsLinkedin size={ 30 } /> </a>
+              <a href="https://github.com/rayaneacacio" target="_blank"> <FaGithub size={ 30 } /> </a>
+              <a href="https://www.facebook.com/profile.php?id=100065219643115" target="_blank"> <FaFacebook size={ 30 } /> </a>
+            </div>
+          </div>
+
+          <footer>
+            © 2024 | 💜 by Rayane Acácio
+          </footer>
         </div>
       </Main>
 
