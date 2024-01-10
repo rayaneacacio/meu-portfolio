@@ -102,8 +102,6 @@ export default createGlobalStyle`
 
   @media(min-width: 1000px) {
     body {
-      background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
-
       &::-webkit-scrollbar {
         display: block;
         background: none;
@@ -111,7 +109,7 @@ export default createGlobalStyle`
       }
 
       &::-webkit-scrollbar-thumb {
-        background: ${({ theme }) => theme.COLORS.WHITE};
+        background: ${({ theme }) => theme.COLORS.YELLOW};
         border-radius: 8px;
       }
     }

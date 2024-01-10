@@ -103,7 +103,7 @@ export function Home() {
         <div className="home">
           <div>
             <h2>Oie! Eu sou </h2>
-            <h1>Rayane Acácio,</h1>
+            <h1 style={{ color: "#e1b4e5" }}>Rayane Acácio,</h1>
             <h2 style={{ color: "#a1eacd" }}>desenvolvedora web</h2>
 
             <div>
@@ -146,6 +146,7 @@ export function Home() {
             <span style={{ top: window.innerWidth >= 1000 ? "-2rem" : "-1rem", left: window.innerWidth >= 1000 ? "53rem" : "19rem", fontSize: "1.5rem" }}>FIGMA</span>
             <span style={{ top: window.innerWidth >= 1000 ? "-5rem" : "-13rem", left: window.innerWidth >= 1000 ? "75rem" : "-11rem", fontSize: "1.5rem" }}>WEB</span>
             <span style={{ top: window.innerWidth >= 1000 ? "-7rem" : "-10rem", right: window.innerWidth >= 1000 ? "36rem" : "29rem", fontSize: "1.5rem" }}>API</span>
+            <span style={{ bottom: window.innerWidth >= 1000 ? "0" : "-3rem", right: window.innerWidth >= 1000 ? "49rem" : "4rem", fontSize: "1.3rem" }}>SQLITE</span>
           </div>
 
           <div className="blank"></div>
@@ -162,6 +163,7 @@ export function Home() {
 
           <div>
             <h2>FALE COMIGO</h2>
+            <p>me encontre aqui:</p>
             <button>
               <a href="mailto:rray74307@gmail.com"> <IoMdMail /> rray74307@gmail.com</a>
               <div className="borderEmail" style={{ height: "2px", background: "#36344b" }}></div>
@@ -176,7 +178,9 @@ export function Home() {
           </div>
 
           <footer>
-            © 2024 | ❤ by Rayane Acácio
+            <p>© 2024 |</p>
+            <FaHeart />
+            <p>by Rayane Acácio</p>
           </footer>
         </div>
       </Main>

@@ -1,31 +1,20 @@
 export default {
   COLORS: {
-    // PINK_555: "#ffcee9",
-    PINK_300: "#fb9cb8 ",
-    // PINK_500: "#E70D91",
-    // PINK: "#FEBED1",
+    PINK: "#fb9cb8 ",
     PINK_200: "#fad1dd",
-    // PINK_200: "#fdc7b8",
-    // PINK_250: "#eeb4aa",
-    // PURPLE: "#443d44",
-    // PURPLE: "#d6909b",
-    PURPLE: "#dc8fad",
+    PINK_700: "#dc8fad",
 
-    // BLUE: "#d9c5c5",
+    PURPLE: "#725293",
+    PURPLE_200: "#e1b4e5",
 
     BACKGROUND: "#171717",
-    // BACKGROUND_2: "hsl(0, 0%, 5%);",
     BACKGROUND_2: "#36344b",
-    // BACKGROUND_2: "#4f6289",
-    // BACKGROUND_2: "#4a001e",
     GRAY: "rgb(25, 25, 25)",
 
     WHITE: "#FFF",
 
     GREEN: "#a1eacd",
-    BLUE: "#7689d8",
-
-    // #b75975
+    YELLOW: "#f4f1bb",
   },
 
   FONTS: {
