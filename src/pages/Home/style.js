@@ -312,6 +312,7 @@ export const Main = styled.main`
 
     .home {
       height: 90vh;
+      padding: 0;
       flex-direction: row-reverse;
 
       > :first-child {
