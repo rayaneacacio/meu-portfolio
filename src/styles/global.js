@@ -19,13 +19,11 @@ export default createGlobalStyle`
     overflow-x: hidden;
     scroll-behavior: smooth;
 
-    scrollbar-width: none;
     -ms-overflow-style: none;
 
     &::-webkit-scrollbar {
       background: transparent;
-      width: none;
-      display: none;
+      width: 0;
     }
   }
 
@@ -100,9 +98,14 @@ export default createGlobalStyle`
     }
   }
 
+  @keyframes animationMyProfile {
+    to {
+      transform: translateX(0);
+    }
+  }
+
   @media(min-width: 1000px) {
     body {
-      scrollbar-width: auto;
       -ms-overflow-style: auto;
 
       &::-webkit-scrollbar {

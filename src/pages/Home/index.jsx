@@ -157,7 +157,7 @@ export function Home() {
         </div>
 
         <div className="projetos">
-          <Projeto img={ imgZer01Modas } img_mobile={ imgZer01Modas_mobile } name="Zer01 Modas" description="ecommerce fullstack responsivo com javascript" repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app" />
+          <Projeto img={ imgZer01Modas } img_mobile={ imgZer01Modas_mobile } name="Zer01 Modas" description="Ecommerce fullstack responsivo" repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app" />
           <Projeto img={ imgFoodExplorer } img_mobile={ imgFoodExplorer_mobile } name="Food Explorer" description="Menu interativo para um restaurante" repository="https://github.com/rayaneacacio/food-explorer" deploy="https://sparkly-pavlova-9f4ab9.netlify.app/" />
           <Projeto img={ imgExpertNotes } img_mobile={ imgExpertNotes_mobile } name="Expert Notes" description="bloco de anotações por áudio com typescript" repository="https://github.com/rayaneacacio/Expert-Notes" deploy="https://expertnote.netlify.app/"/>
           <Projeto img={ imgRocketMovies } name="Rocket Movies" description="site para favoritar filmes" repository="https://github.com/rayaneacacio/rocket-movies" deploy="https://main--reactrocketmovies.netlify.app/" />

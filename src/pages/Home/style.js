@@ -19,6 +19,7 @@ export const Container = styled.div`
 
   header > img {
     width: 3rem;
+    cursor: pointer;
   }
 
   nav {
@@ -113,6 +114,10 @@ export const Container = styled.div`
       z-index: 2;
       padding: 2rem 15rem;
       border: none;
+
+      img {
+        cursor: auto;
+      }
     }
 
     nav {
@@ -178,6 +183,7 @@ export const Main = styled.main`
       width: 30rem;
       height: 30rem;
       border-radius: 50%;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     }
 
     span {
@@ -197,7 +203,7 @@ export const Main = styled.main`
   .sobre_mim {
     color: ${({ theme }) => theme.COLORS.PINK_200};
     font-size: 1.8rem;
-    text-align: justify;
+    text-align: left;
     width: 100%;
     margin-bottom: 3rem;
 
@@ -239,7 +245,6 @@ export const Main = styled.main`
 
     > span {
       position: absolute;
-      cursor: none;
     }
   }
 
@@ -310,6 +315,12 @@ export const Main = styled.main`
     }
   }
 
+  @media(min-width: 500px) {
+    .home > :last-child {
+      transform: skew(-82deg, 3deg);
+    }
+  }
+
   @media(min-width: 1000px) {
     font-size: 1.6rem;
 
@@ -320,6 +331,8 @@ export const Main = styled.main`
 
       > :first-child {
         text-align: left;
+        transform: translateX(-5rem);
+        animation: animationMyProfile 1s forwards ease;
       }
 
       > :last-child {
