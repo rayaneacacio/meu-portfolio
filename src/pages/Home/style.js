@@ -31,6 +31,7 @@ export const Container = styled.div`
 
   nav ul, nav a {
     color: ${({ theme }) => theme.COLORS.YELLOW};
+    user-select: none;
   }
 
   nav a:hover, nav ul:hover {
@@ -134,8 +135,7 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
 
   .home {
     background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
@@ -174,6 +174,7 @@ export const Main = styled.main`
     > :first-child {
       background-color: ${({ theme }) => theme.COLORS.PINK};
       background-size: cover;
+      background-position: center;
       width: 30rem;
       height: 30rem;
       border-radius: 50%;
@@ -187,6 +188,8 @@ export const Main = styled.main`
   .icons_linguage {
     color: ${({ theme }) => theme.COLORS.WHITE};
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 3rem;
     margin: 2rem 0;
   }
@@ -345,6 +348,7 @@ export const Main = styled.main`
     }
 
     .icons_linguage {
+      flex-direction: row;
       gap: 10rem;
       margin: 0;
 
@@ -357,6 +361,7 @@ export const Main = styled.main`
     .projetos {
       height: 90rem;
       padding-top: 5rem;
+      padding-bottom: 13rem;
     }
 
     .contato {

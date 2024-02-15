@@ -8,6 +8,7 @@ import { FaNode } from "react-icons/fa";
 import { SiStyledcomponents } from "react-icons/si";
 import { IoMdMail } from "react-icons/io";
 import { FaHeart } from "react-icons/fa6";
+import { BiLogoTypescript } from "react-icons/bi";
 
 import minha_foto from "../../assets/eu.png";
 import imgZer01Modas from "../../assets/zer01modas.jpeg";
@@ -15,6 +16,8 @@ import imgZer01Modas_mobile from "../../assets/zer01modas_mobile.jpeg";
 import imgFoodExplorer from "../../assets/foodexplorer.jpeg";
 import imgFoodExplorer_mobile from "../../assets/foodexplorer_mobile.jpeg";
 import imgRocketMovies from "../../assets/rocketmovies.jpeg";
+import imgExpertNotes from "../../assets/expertnotes.jpeg";
+import imgExpertNotes_mobile from "../../assets/expertnotes_mobile.jpeg";
 import icondev from "../../assets/devicon.svg";
 
 import { Projeto } from "../../components/projeto";
@@ -129,32 +132,34 @@ export function Home() {
           <h2>HELLO WORLD :)</h2>
 
           <p>
-            Tenho 19 anos, sou programadora frontend e estou estudando desenvolvimento web. Tenho habilidades em JavaScript, React, Styled Components e Node. Já trabalhei em vários projetos, incluindo um e-commerce fullstack e um menu interativo com banco de dados sqlite
+            Tenho 20 anos, sou programadora frontend e estou estudando desenvolvimento web. Tenho habilidades em JavaScript, React, Styled Components e Node. Já trabalhei em vários projetos, incluindo um e-commerce fullstack e um menu interativo com banco de dados sqlite
           </p>
 
           <div className="icons_linguage">
             <SiStyledcomponents title="Styled Components" size={ 60 } />
+            <BiLogoTypescript title="TypeScript" size={ 60 } />
             <IoLogoJavascript title="JavaScript" size={ 60 } />
             <FaReact title="React JS" size={ 60 } />
             <FaNode title="Node JS" size={ 60 } />
           </div>
 
           <div className="flutuando">
-            <span style={{ top: window.innerWidth >= 1000 ? "-18rem" : "-3rem", left: window.innerWidth >= 1000 ? "47rem" : "4rem", fontSize: "1.3rem" }}>VSCODE</span>
-            <span style={{ top: window.innerWidth >= 1000 ? "-17rem" : "-2rem", right: window.innerWidth >= 1000 ? "51rem" : "3rem", fontSize: "1.4rem" }}>HTML5</span>
-            <span style={{ top: window.innerWidth >= 1000 ? "-8rem" : "-11rem", left: window.innerWidth >= 1000 ? "30rem" : "29rem", fontSize: "1.4rem" }}>CSS3</span>
-            <span style={{ top: window.innerWidth >= 1000 ? "-2rem" : "-1rem", left: window.innerWidth >= 1000 ? "53rem" : "19rem", fontSize: "1.5rem" }}>FIGMA</span>
-            <span style={{ top: window.innerWidth >= 1000 ? "-5rem" : "-13rem", left: window.innerWidth >= 1000 ? "75rem" : "-11rem", fontSize: "1.5rem" }}>WEB</span>
-            <span style={{ top: window.innerWidth >= 1000 ? "-7rem" : "-10rem", right: window.innerWidth >= 1000 ? "36rem" : "29rem", fontSize: "1.5rem" }}>API</span>
-            <span style={{ bottom: window.innerWidth >= 1000 ? "0" : "-3rem", right: window.innerWidth >= 1000 ? "49rem" : "4rem", fontSize: "1.3rem" }}>SQLITE</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-18rem" : "-8rem", left: window.innerWidth >= 1000 ? "44rem" : "4rem", fontSize: "1.3rem" }}>VSCODE</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-17rem" : "-7rem", right: window.innerWidth >= 1000 ? "44rem" : "6rem", fontSize: "1.4rem" }}>HTML5</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-5rem" : "-11rem", left: window.innerWidth >= 1000 ? "26rem" : "26rem", fontSize: "1.4rem" }}>CSS3</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-2rem" : "-3rem", left: window.innerWidth >= 1000 ? "49rem" : "9rem", fontSize: "1.4rem" }}>FIGMA</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-5rem" : "-3rem", left: window.innerWidth >= 1000 ? "67rem" : "31rem", fontSize: "1.3rem" }}>WEB</span>
+            <span style={{ top: window.innerWidth >= 1000 ? "-5rem" : "-10rem", right: window.innerWidth >= 1000 ? "39rem" : "24rem", fontSize: "1.5rem" }}>API</span>
+            <span style={{ bottom: window.innerWidth >= 1000 ? "2rem" : "0", right: window.innerWidth >= 1000 ? "57rem" : "16rem", fontSize: "1.3rem" }}>SQLITE</span>
           </div>
 
           <div className="blank"></div>
         </div>
 
         <div className="projetos">
-          <Projeto img={ imgZer01Modas } img_mobile={ imgZer01Modas_mobile } name="Zer01 Modas" description="site de vendas responsivo" repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app" />
+          <Projeto img={ imgZer01Modas } img_mobile={ imgZer01Modas_mobile } name="Zer01 Modas" description="ecommerce fullstack responsivo com javascript" repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app" />
           <Projeto img={ imgFoodExplorer } img_mobile={ imgFoodExplorer_mobile } name="Food Explorer" description="Menu interativo para um restaurante" repository="https://github.com/rayaneacacio/food-explorer" deploy="https://sparkly-pavlova-9f4ab9.netlify.app/" />
+          <Projeto img={ imgExpertNotes } img_mobile={ imgExpertNotes_mobile } name="Expert Notes" description="bloco de anotações por áudio com typescript" repository="https://github.com/rayaneacacio/Expert-Notes" deploy="https://expertnote.netlify.app/"/>
           <Projeto img={ imgRocketMovies } name="Rocket Movies" description="site para favoritar filmes" repository="https://github.com/rayaneacacio/rocket-movies" deploy="https://main--reactrocketmovies.netlify.app/" />
         </div>
         
@@ -165,7 +170,7 @@ export function Home() {
             <h2>FALE COMIGO</h2>
             <p>me encontre aqui:</p>
             <button>
-              <a href="mailto:rray74307@gmail.com"> <IoMdMail /> rray74307@gmail.com</a>
+              <a href="mailto:rayaneacacio48@gmail.com"> <IoMdMail /> rayaneacacio48@gmail.com</a>
               <div className="borderEmail" style={{ height: "2px", background: "#36344b" }}></div>
             </button>
 

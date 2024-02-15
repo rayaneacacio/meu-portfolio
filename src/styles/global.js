@@ -102,9 +102,12 @@ export default createGlobalStyle`
 
   @media(min-width: 1000px) {
     body {
+      scrollbar-width: auto;
+      -ms-overflow-style: auto;
+
       &::-webkit-scrollbar {
         display: block;
-        background: none;
+        background: transparent;
         width: 0.5rem;
       }
 
