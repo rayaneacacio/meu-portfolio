@@ -203,7 +203,7 @@ export const Main = styled.main`
   .sobre_mim {
     color: ${({ theme }) => theme.COLORS.PINK_200};
     font-size: 1.8rem;
-    text-align: left;
+    text-align: justify;
     width: 100%;
     margin-bottom: 3rem;
 
