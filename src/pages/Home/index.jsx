@@ -1,7 +1,5 @@
-import { FaSquareInstagram } from "react-icons/fa6";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { FaNode } from "react-icons/fa";
@@ -18,6 +16,8 @@ import imgFoodExplorer_mobile from "../../assets/foodexplorer_mobile.jpeg";
 import imgRocketMovies from "../../assets/rocketmovies.jpeg";
 import imgExpertNotes from "../../assets/expertnotes.jpeg";
 import imgExpertNotes_mobile from "../../assets/expertnotes_mobile.jpeg";
+import imgAcaiRuby from "../../assets/acaiRuby.jpeg";
+import imgAcaiRubyMobile from "../../assets/acaiRubyMobile.jpeg";
 import icondev from "../../assets/devicon.svg";
 
 import { Projeto } from "../../components/projeto";
@@ -94,11 +94,8 @@ export function Home() {
           <ul onClick={(event) => handleNavigateSections(event) } > SOBRE MIM </ul>
           <ul onClick={(event) => handleNavigateSections(event) } > PROJETOS </ul>
           <ul onClick={(event) => handleNavigateSections(event) } > CONTATO </ul>
-          {/* <a href="#"> CURRÍCULO </a> */}
-          <a href="https://www.instagram.com/rayaneakkacio/" target="_blank"> <FaSquareInstagram size={ 23 } /> </a>
           <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank"> <BsLinkedin size={ 23 } /> </a>
           <a href="https://github.com/rayaneacacio" target="_blank"> <FaGithub size={ 24 } /> </a>
-          <a href="https://www.facebook.com/profile.php?id=100065219643115" target="_blank"> <FaFacebook size={ 24 } /> </a>
         </nav>
       </header>
 
@@ -109,9 +106,9 @@ export function Home() {
             <h1 style={{ color: "#e1b4e5" }}>Rayane Acácio,</h1>
             <h2 style={{ color: "#a1eacd" }}>desenvolvedora web</h2>
 
-            <div>
-              <button> <a href="https://drive.google.com/file/d/1u5zV9TBfF_C59MgGcvwebeZmfYMR3uWl/view?usp=sharing" target="_blank">CERTIFICADO</a> </button>
-              <button> <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank">LINKEDIN</a> </button>
+            <div className="homeButtons">
+              <a href="https://drive.google.com/file/d/1u5zV9TBfF_C59MgGcvwebeZmfYMR3uWl/view?usp=sharing" target="_blank">CERTIFICADO</a>
+              <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank">LINKEDIN</a>
             </div>
           </div>
 
@@ -132,7 +129,7 @@ export function Home() {
           <h2>HELLO WORLD :)</h2>
 
           <p>
-            Tenho 20 anos, sou programadora frontend e estou estudando desenvolvimento web. Tenho habilidades em JavaScript, React, Styled Components e Node. Já trabalhei em vários projetos, incluindo um e-commerce fullstack e um menu interativo com banco de dados sqlite
+            Tenho 20 anos, sou programadora e estou estudando desenvolvimento web. Tenho experiência com JavaScript, TypeScript, ReactJS, Styled Components e já criei APIs NodeJS com banco de dados SQLite.
           </p>
 
           <div className="icons_linguage">
@@ -157,10 +154,52 @@ export function Home() {
         </div>
 
         <div className="projetos">
-          <Projeto img={ imgZer01Modas } img_mobile={ imgZer01Modas_mobile } name="Zer01 Modas" description="Ecommerce fullstack responsivo" repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app" />
-          <Projeto img={ imgFoodExplorer } img_mobile={ imgFoodExplorer_mobile } name="Food Explorer" description="Menu interativo para um restaurante" repository="https://github.com/rayaneacacio/food-explorer" deploy="https://sparkly-pavlova-9f4ab9.netlify.app/" />
-          <Projeto img={ imgExpertNotes } img_mobile={ imgExpertNotes_mobile } name="Expert Notes" description="bloco de anotações por áudio com typescript" repository="https://github.com/rayaneacacio/Expert-Notes" deploy="https://expertnote.netlify.app/"/>
-          <Projeto img={ imgRocketMovies } name="Rocket Movies" description="site para favoritar filmes" repository="https://github.com/rayaneacacio/rocket-movies" deploy="https://main--reactrocketmovies.netlify.app/" />
+          <Projeto 
+            img={ imgAcaiRuby } 
+            img_mobile={ imgAcaiRubyMobile }
+            name="Açaí Ruby" 
+            repository="https://github.com/rayaneacacio/Acai-Ruby" 
+            deploy="https://acai-ruby.netlify.app"
+            languages={[ "TypeScript", "SQLite", "ReactJS", "Styled Components", "NodeJS" ]}
+            description="Totem de autoatendimento para acaiteria desenvolvido com TypeScript, React JS, 
+            Styled Components, e uma API Node.js com banco de dados SQLite. Esse projeto oferece uma maneira simples
+            e rápida para os clientes fazerem pedidos e inclui um site de administração, para alterações no sistema quando necessário." />
+
+          <Projeto 
+            style={{ flexDirection: "row-reverse" }}
+            img={ imgZer01Modas } 
+            img_mobile={ imgZer01Modas_mobile } 
+            name="Zer01 Modas" 
+            languages={[ "JavaScript", "ReactJS", "Styled Components", "NodeJS", "SQLite" ]}
+            repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app"
+            description="Ecommerce desenvolvido com JavaScript, ReactJS, Styled Components, NodeJS e banco de dados SQLite. Apresenta um catálogo de roupas para os clientes e o administrador da loja pode editar o catálogo,
+            adicionar promoções  e cupons de desconto." />
+
+          <Projeto 
+            img={ imgFoodExplorer } 
+            img_mobile={ imgFoodExplorer_mobile } 
+            name="Food Explorer" 
+            languages={[ "JavaScript", "ReactJS", "Styled Components", "NodeJS", "SQLite" ]}
+            repository="https://github.com/rayaneacacio/food-explorer" deploy="https://sparkly-pavlova-9f4ab9.netlify.app/"
+            description="Menu interativo para um restaurante desenvolvido com JavaScript, ReactJS, Styled Components, NodeJS e banco de dados SQLite. Aplicação interativa que facilita o processo de pedidos e possui uma página
+            de organização e gestão do cardápio para o dono do restaurante." />
+
+          <Projeto 
+            style={{ flexDirection: "row-reverse" }}
+            img={ imgExpertNotes } 
+            img_mobile={ imgExpertNotes_mobile } 
+            name="Expert Notes" 
+            languages={[ "JavaScript", "ReactJS", "Styled Components" ]}
+            repository="https://github.com/rayaneacacio/Expert-Notes" deploy="https://expertnote.netlify.app/"
+            description="Bloco de anotações por texto e áudio com TypeScript, ReactJS e Styled Components. Esse projeto foi
+            desenvolvido durante o evento NLW Expert 2024 RocketSeat." />
+
+          <Projeto 
+            img={ imgRocketMovies } 
+            name="Rocket Movies" 
+            languages={[ "JavaScript", "ReactJS", "Styled Components", "NodeJS", "SQLite" ]}
+            repository="https://github.com/rayaneacacio/Expert-Notes" deploy="https://expertnote.netlify.app/"
+            description="" />
         </div>
         
         <div className="contato">
@@ -174,11 +213,9 @@ export function Home() {
               <div className="borderEmail" style={{ height: "2px", background: "#36344b" }}></div>
             </button>
 
-            <div className="divRedesSociais" style={{ display: "flex", gap: "4rem", opacity: "0" }}>
-              <a href="https://www.instagram.com/rayaneakkacio/" target="_blank"> <FaSquareInstagram size={ 30 } /> </a>
+            <div className="divRedesSociais" style={{ display: "flex", opacity: "0" }}>
               <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank"> <BsLinkedin size={ 30 } /> </a>
               <a href="https://github.com/rayaneacacio" target="_blank"> <FaGithub size={ 30 } /> </a>
-              <a href="https://www.facebook.com/profile.php?id=100065219643115" target="_blank"> <FaFacebook size={ 30 } /> </a>
             </div>
           </div>
 

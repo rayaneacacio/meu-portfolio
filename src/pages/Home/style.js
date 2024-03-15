@@ -35,39 +35,28 @@ export const Container = styled.div`
     user-select: none;
   }
 
-  nav a:hover, nav ul:hover {
-    border-bottom: 3px solid transparent; 
+  nav ul:hover, nav a:hover {
+    margin-bottom: 8px;
   }
 
   nav ul {
     display: none;
   }
 
-  button {
-    background: ${({ theme }) => theme.COLORS.PINK};
-    font-family: ${({ theme }) => theme.FONTS.MONTSERRAT};
-    font-size: 1.7rem;
-    font-weight: bold;
-    padding: 1rem 2rem;
-    border-radius: 3px;
-    margin-top: 3rem;
+  .homeButtons {
+    margin-top: 2rem;
 
-    > a {
+    a {
+      background: ${({ theme }) => theme.COLORS.PINK};
       color: ${({ theme }) => theme.COLORS.WHITE};
+      margin-top: 3rem;
     }
 
-    a:hover {
-      filter: none;
-    }
-  }
-
-  button:last-of-type {
-    background: ${({ theme }) => theme.COLORS.WHITE};;
-    border: 1px solid ${({ theme }) => theme.COLORS.PINK};
-    margin-left: 1rem;
-
-    > a {
+    a:last-of-type {
+      background: ${({ theme }) => theme.COLORS.WHITE};
       color: ${({ theme }) => theme.COLORS.PINK};
+      border: 1px solid ${({ theme }) => theme.COLORS.PINK};
+      margin-left: 1rem;
     }
   }
 
@@ -237,7 +226,6 @@ export const Main = styled.main`
   }
 
   .flutuando {
-    color: ${({ theme }) => theme.COLORS.GREEN};
     width: 100%;
     height: 100%;
     position: relative;
@@ -251,12 +239,13 @@ export const Main = styled.main`
   .projetos {
     background: ${({ theme }) => theme.COLORS.PINK_700};
     width: 100%;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
+    padding: 13rem 5rem 10rem;
 
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 7rem;
+    gap: 15rem;
     flex-wrap: wrap;
 
     > div {
@@ -331,8 +320,6 @@ export const Main = styled.main`
 
       > :first-child {
         text-align: left;
-        transform: translateX(-5rem);
-        animation: animationMyProfile 1s forwards ease;
       }
 
       > :last-child {
@@ -372,8 +359,6 @@ export const Main = styled.main`
     }
 
     .projetos {
-      height: 90rem;
-      padding-top: 5rem;
       padding-bottom: 13rem;
     }
 

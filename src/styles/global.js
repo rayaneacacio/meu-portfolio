@@ -18,12 +18,10 @@ export default createGlobalStyle`
     background: ${({ theme }) => theme.COLORS.BACKGROUND};
     overflow-x: hidden;
     scroll-behavior: smooth;
-
     -ms-overflow-style: none;
 
     &::-webkit-scrollbar {
-      background: transparent;
-      width: 0;
+      display: none;
     }
   }
 
@@ -31,18 +29,23 @@ export default createGlobalStyle`
     font-family: ${({ theme }) => theme.FONTS.MONTSERRAT};
   }
 
-  button, ul {
+  button, ul, a {
     background: none;
     cursor: pointer;
-    transition: filter 0.2s;
+    transition: 0.3s;
   }
 
   a {
+    font-family: ${({ theme }) => theme.FONTS.MONTSERRAT};
+    font-size: 1.7rem;
+    font-weight: bold;
     text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 3px;
   }
 
   button:hover, a:hover, ul:hover {
-    filter: brightness(0.7);
+    filter: brightness(0.8);
   }
 
   @keyframes animateProjects {
@@ -95,12 +98,6 @@ export default createGlobalStyle`
     to {
       opacity: 1;
       transform: translateY(0);
-    }
-  }
-
-  @keyframes animationMyProfile {
-    to {
-      transform: translateX(0);
     }
   }
 
