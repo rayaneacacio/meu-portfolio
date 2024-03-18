@@ -5,20 +5,22 @@ export const Container = styled.div`
   font-size: 1.8rem;
   border-radius: 5px;
   display: flex;
+  flex-direction: column;
   gap: 3rem;
   position: relative;
 
   > h2 {
+    color: ${({ theme }) => theme.COLORS.PINK_200};
     font-family: ${({ theme }) => theme.FONTS.MONTSERRAT};
-    position: absolute;
-    top: -4rem;
-    left: -1rem;
   }
 
   > div {
-    width: 45rem;
-    height: 27rem;
+    width: 31rem;
     position: relative;
+  }
+
+  > div:first-of-type {
+    height: 18rem;
   }
 
   .imgDesktop {
@@ -46,7 +48,6 @@ export const Container = styled.div`
   }
 
   .description {
-    width: 55rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -58,10 +59,6 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
-
-    svg path {
-      fill: ${({ theme }) => theme.COLORS.YELLOW};
-    }
   }
 
   .links {
@@ -69,24 +66,36 @@ export const Container = styled.div`
     gap: 1rem;
 
     a {
-      background-color: ${({ theme }) => theme.COLORS.PURPLE_200};
-      color: ${({ theme }) => theme.COLORS.PURPLE};
+      background-color: ${({ theme }) => theme.COLORS.PINK_200};
+      color: ${({ theme }) => theme.COLORS.PINK_900};
       display: flex;
       align-items: center;
       gap: 5px;
 
       &:hover {
-        background-color: ${({ theme }) => theme.COLORS.PURPLE};
-        color: ${({ theme }) => theme.COLORS.PURPLE_200};
+        background-color: ${({ theme }) => theme.COLORS.PINK_900};
+        color: ${({ theme }) => theme.COLORS.PINK_200};
         filter: none;
       }
     }
   }
 
   @media(min-width: 1000px) {
-    > div {
+    flex-direction: row;
+
+    > h2 {
+      position: absolute;
+      top: -4rem;
+      left: -1rem;
+    }
+
+    > div, > div:first-of-type {
       width: 49rem;
       height: 29rem;
+    }
+
+    .description {
+      width: 55rem;
     }
   }
 `;

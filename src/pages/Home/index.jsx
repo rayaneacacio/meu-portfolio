@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
 import { FaNode } from "react-icons/fa";
-import { SiStyledcomponents } from "react-icons/si";
+import { SiJavascript, SiSqlite, SiStyledcomponents } from "react-icons/si";
 import { IoMdMail } from "react-icons/io";
 import { FaHeart } from "react-icons/fa6";
 import { BiLogoTypescript } from "react-icons/bi";
@@ -103,8 +103,8 @@ export function Home() {
         <div className="home">
           <div>
             <h2>Oie! Eu sou </h2>
-            <h1 style={{ color: "#e1b4e5" }}>Rayane Acácio,</h1>
-            <h2 style={{ color: "#a1eacd" }}>desenvolvedora web</h2>
+            <h1 style={{ color: "#d891de" }}>Rayane Acácio,</h1>
+            <h2 style={{ color: "#9192de" }}>desenvolvedora web</h2>
 
             <div className="homeButtons">
               <a href="https://drive.google.com/file/d/1u5zV9TBfF_C59MgGcvwebeZmfYMR3uWl/view?usp=sharing" target="_blank">CERTIFICADO</a>
@@ -138,16 +138,16 @@ export function Home() {
             <IoLogoJavascript title="JavaScript" size={ 60 } />
             <FaReact title="React JS" size={ 60 } />
             <FaNode title="Node JS" size={ 60 } />
-          </div>
 
-          <div className="flutuando">
-            <span style={{ top: window.innerWidth >= 1000 ? "-18rem" : "-8rem", left: window.innerWidth >= 1000 ? "44rem" : "4rem", fontSize: "1.3rem" }}>VSCODE</span>
-            <span style={{ top: window.innerWidth >= 1000 ? "-17rem" : "-7rem", right: window.innerWidth >= 1000 ? "44rem" : "6rem", fontSize: "1.4rem" }}>HTML5</span>
-            <span style={{ top: window.innerWidth >= 1000 ? "-5rem" : "-11rem", left: window.innerWidth >= 1000 ? "26rem" : "26rem", fontSize: "1.4rem" }}>CSS3</span>
-            <span style={{ top: window.innerWidth >= 1000 ? "-2rem" : "-3rem", left: window.innerWidth >= 1000 ? "49rem" : "9rem", fontSize: "1.4rem" }}>FIGMA</span>
-            <span style={{ top: window.innerWidth >= 1000 ? "-5rem" : "-3rem", left: window.innerWidth >= 1000 ? "67rem" : "31rem", fontSize: "1.3rem" }}>WEB</span>
-            <span style={{ top: window.innerWidth >= 1000 ? "-5rem" : "-10rem", right: window.innerWidth >= 1000 ? "39rem" : "24rem", fontSize: "1.5rem" }}>API</span>
-            <span style={{ bottom: window.innerWidth >= 1000 ? "2rem" : "0", right: window.innerWidth >= 1000 ? "57rem" : "16rem", fontSize: "1.3rem" }}>SQLITE</span>
+            <div className="flutuando">
+              <span style={{ top: window.innerWidth >= 1000 ? "-21rem" : "-8rem", left: window.innerWidth >= 1000 ? "13rem" : "4rem", fontSize: "1.3rem" }}>VSCODE</span>
+              <span style={{ top: window.innerWidth >= 1000 ? "-21rem" : "-7rem", right: window.innerWidth >= 1000 ? "19rem" : "6rem", fontSize: "1.4rem" }}>HTML5</span>
+              <span style={{ top: window.innerWidth >= 1000 ? "-11rem" : "-11rem", left: window.innerWidth >= 1000 ? "2rem" : "26rem", fontSize: "1.4rem" }}>CSS3</span>
+              <span style={{ top: window.innerWidth >= 1000 ? "-7rem" : "-3rem", left: window.innerWidth >= 1000 ? "43rem" : "9rem", fontSize: "1.4rem" }}>FIGMA</span>
+              <span style={{ top: window.innerWidth >= 1000 ? "-6rem" : "-3rem", left: window.innerWidth >= 1000 ? "75rem" : "31rem", fontSize: "1.3rem" }}>WEB</span>
+              <span style={{ top: window.innerWidth >= 1000 ? "-9rem" : "-10rem", right: window.innerWidth >= 1000 ? "38rem" : "24rem", fontSize: "1.5rem" }}>API</span>
+              <span style={{ bottom: window.innerWidth >= 1000 ? "6rem" : "0", right: window.innerWidth >= 1000 ? "76rem" : "16rem", fontSize: "1.3rem" }}>SQLITE</span>
+            </div>
           </div>
 
           <div className="blank"></div>
@@ -160,46 +160,44 @@ export function Home() {
             name="Açaí Ruby" 
             repository="https://github.com/rayaneacacio/Acai-Ruby" 
             deploy="https://acai-ruby.netlify.app"
-            languages={[ "TypeScript", "SQLite", "ReactJS", "Styled Components", "NodeJS" ]}
+            languages={[ <BiLogoTypescript size={ 35 } />, <SiSqlite size={ 30 } />, <FaReact size={ 32 } />, <SiStyledcomponents size={ 50 } />, <FaNode size={ 40 } /> ]}
             description="Totem de autoatendimento para acaiteria desenvolvido com TypeScript, React JS, 
             Styled Components, e uma API Node.js com banco de dados SQLite. Esse projeto oferece uma maneira simples
             e rápida para os clientes fazerem pedidos e inclui um site de administração, para alterações no sistema quando necessário." />
 
           <Projeto 
-            style={{ flexDirection: "row-reverse" }}
             img={ imgZer01Modas } 
             img_mobile={ imgZer01Modas_mobile } 
             name="Zer01 Modas" 
-            languages={[ "JavaScript", "ReactJS", "Styled Components", "NodeJS", "SQLite" ]}
+            languages={[ <SiJavascript size={ 30 } />, <FaReact size={ 32 } />, <SiSqlite size={ 30 } />, <SiStyledcomponents size={ 50 } />, <FaNode size={ 40 } /> ]}
             repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app"
             description="Ecommerce desenvolvido com JavaScript, ReactJS, Styled Components, NodeJS e banco de dados SQLite. Apresenta um catálogo de roupas para os clientes e o administrador da loja pode editar o catálogo,
             adicionar promoções  e cupons de desconto." />
 
           <Projeto 
-            img={ imgFoodExplorer } 
-            img_mobile={ imgFoodExplorer_mobile } 
-            name="Food Explorer" 
-            languages={[ "JavaScript", "ReactJS", "Styled Components", "NodeJS", "SQLite" ]}
-            repository="https://github.com/rayaneacacio/food-explorer" deploy="https://sparkly-pavlova-9f4ab9.netlify.app/"
-            description="Menu interativo para um restaurante desenvolvido com JavaScript, ReactJS, Styled Components, NodeJS e banco de dados SQLite. Aplicação interativa que facilita o processo de pedidos e possui uma página
-            de organização e gestão do cardápio para o dono do restaurante." />
-
-          <Projeto 
-            style={{ flexDirection: "row-reverse" }}
             img={ imgExpertNotes } 
             img_mobile={ imgExpertNotes_mobile } 
             name="Expert Notes" 
-            languages={[ "JavaScript", "ReactJS", "Styled Components" ]}
+            languages={[ <BiLogoTypescript size={ 35 } />, <FaReact size={ 32 } />, <SiStyledcomponents size={ 50 } /> ]}
             repository="https://github.com/rayaneacacio/Expert-Notes" deploy="https://expertnote.netlify.app/"
             description="Bloco de anotações por texto e áudio com TypeScript, ReactJS e Styled Components. Esse projeto foi
             desenvolvido durante o evento NLW Expert 2024 RocketSeat." />
 
           <Projeto 
+            img={ imgFoodExplorer } 
+            img_mobile={ imgFoodExplorer_mobile } 
+            name="Food Explorer" 
+            languages={[ <SiJavascript size={ 30 } />, <FaReact size={ 32 } />, <SiSqlite size={ 30 } />, <SiStyledcomponents size={ 50 } />, <FaNode size={ 40 } />  ]}
+            repository="https://github.com/rayaneacacio/food-explorer" deploy="https://sparkly-pavlova-9f4ab9.netlify.app/"
+            description="Menu interativo para um restaurante desenvolvido com JavaScript, ReactJS, Styled Components, NodeJS e banco de dados SQLite. Aplicação interativa que facilita o processo de pedidos e possui uma página
+            de organização e gestão do cardápio para o dono do restaurante." />
+
+          <Projeto 
             img={ imgRocketMovies } 
             name="Rocket Movies" 
-            languages={[ "JavaScript", "ReactJS", "Styled Components", "NodeJS", "SQLite" ]}
-            repository="https://github.com/rayaneacacio/Expert-Notes" deploy="https://expertnote.netlify.app/"
-            description="" />
+            languages={[ <SiJavascript size={ 30 } />, <FaReact size={ 32 } />, <SiSqlite size={ 30 } />, <SiStyledcomponents size={ 50 } />, <FaNode size={ 40 } /> ]}
+            repository="https://github.com/rayaneacacio/rocket-movies" deploy="https://main--reactrocketmovies.netlify.app/"
+            description="Plataforma para cadastrar e avaliar filmes. Feito com JavaScript, ReactJS, Styled Components e NodeJS" />
         </div>
         
         <div className="contato">
@@ -210,7 +208,7 @@ export function Home() {
             <p>me encontre aqui:</p>
             <button>
               <a href="mailto:rayaneacacio48@gmail.com"> <IoMdMail /> rayaneacacio48@gmail.com</a>
-              <div className="borderEmail" style={{ height: "2px", background: "#36344b" }}></div>
+              <div className="borderEmail" style={{ height: "2px", background: "white" }}></div>
             </button>
 
             <div className="divRedesSociais" style={{ display: "flex", opacity: "0" }}>

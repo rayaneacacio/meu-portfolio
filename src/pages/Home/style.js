@@ -26,7 +26,6 @@ export const Container = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 4rem;
     font-weight: bold;
   }
 
@@ -35,7 +34,7 @@ export const Container = styled.div`
     user-select: none;
   }
 
-  nav ul:hover, nav a:hover {
+  nav ul:hover, nav a:hover{
     margin-bottom: 8px;
   }
 
@@ -166,7 +165,7 @@ export const Main = styled.main`
     position: relative;
 
     > :first-child {
-      background-color: ${({ theme }) => theme.COLORS.PINK};
+      background-color: ${({ theme }) => theme.COLORS.PINK_200};
       background-size: cover;
       background-position: center;
       width: 30rem;
@@ -190,7 +189,7 @@ export const Main = styled.main`
   }
 
   .sobre_mim {
-    color: ${({ theme }) => theme.COLORS.PINK_200};
+    color: ${({ theme }) => theme.COLORS.PURPLE_700};
     font-size: 1.8rem;
     text-align: justify;
     width: 100%;
@@ -199,6 +198,7 @@ export const Main = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
 
     padding-bottom: 2rem;
@@ -227,7 +227,6 @@ export const Main = styled.main`
 
   .flutuando {
     width: 100%;
-    height: 100%;
     position: relative;
     opacity: 0.5 !important;
 
@@ -237,15 +236,15 @@ export const Main = styled.main`
   }
 
   .projetos {
-    background: ${({ theme }) => theme.COLORS.PINK_700};
+    background-color: ${({ theme }) => theme.COLORS.BLACK};
     width: 100%;
-    padding: 13rem 5rem 10rem;
+    padding: 5rem 3rem 10rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15rem;
+    gap: 10rem;
     flex-wrap: wrap;
 
     > div {
@@ -254,8 +253,8 @@ export const Main = styled.main`
   }
 
   .contato {
-    background-color: ${({ theme }) => theme.COLORS.PURPLE};
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_2};
+    background-color: ${({ theme }) => theme.COLORS.PURPLE_500};
+    color: ${({ theme }) => theme.COLORS.WHITE};
     width: 100%;
     height: 80vh;
     position: relative;
@@ -266,7 +265,7 @@ export const Main = styled.main`
     justify-content: space-between;
 
     > :first-child {
-      background-color: ${({ theme }) => theme.COLORS.PURPLE};
+      background-color: ${({ theme }) => theme.COLORS.PURPLE_500};
       width: 100%;
       height: 35px;
       top: -1rem;
@@ -280,6 +279,10 @@ export const Main = styled.main`
       align-items: center;
       gap: 1rem;
       opacity: 0;
+
+      a {
+        padding: 1rem;
+      }
     }
 
     button {
@@ -290,7 +293,7 @@ export const Main = styled.main`
       margin-top: 5rem;
 
       a {
-        color: ${({ theme }) => theme.COLORS.WHITE};
+        color: ${({ theme }) => theme.COLORS.PINK_900};
         display: flex;
         align-items: center;
         justify-content: center;
@@ -300,7 +303,7 @@ export const Main = styled.main`
     }
 
     a {
-      color: ${({ theme }) => theme.COLORS.WHITE};
+      color: ${({ theme }) => theme.COLORS.PINK_900};
     }
   }
 
@@ -330,13 +333,13 @@ export const Main = styled.main`
 
     .sobre_mim {
       text-align: center;
-      height: 60rem;
+      height: 80vh;
       padding: 10rem 0;
       gap: 5rem;
       margin: 0;
 
       p {
-        width: 50%;
+        width: 65rem;
         padding: 0;
       }
 
@@ -359,10 +362,23 @@ export const Main = styled.main`
     }
 
     .projetos {
-      padding-bottom: 13rem;
+      padding: 13rem 5rem 20rem;
+      gap: 15rem;
+
+      > div:nth-of-type(even) {
+        flex-direction: row-reverse;
+
+        h2 {
+          top: 0;
+        }
+      }
     }
 
     .contato {
+      a{
+        font-size: 2.2rem
+      }
+      
       > :first-child {
         height: 56px;
       }

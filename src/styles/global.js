@@ -18,7 +18,6 @@ export default createGlobalStyle`
     background: ${({ theme }) => theme.COLORS.BACKGROUND};
     overflow-x: hidden;
     scroll-behavior: smooth;
-    -ms-overflow-style: none;
 
     &::-webkit-scrollbar {
       display: none;
@@ -40,7 +39,7 @@ export default createGlobalStyle`
     font-size: 1.7rem;
     font-weight: bold;
     text-decoration: none;
-    padding: 1rem 2rem;
+    padding: 1.5rem;
     border-radius: 3px;
   }
 
@@ -103,8 +102,6 @@ export default createGlobalStyle`
 
   @media(min-width: 1000px) {
     body {
-      -ms-overflow-style: auto;
-
       &::-webkit-scrollbar {
         display: block;
         background: transparent;
@@ -115,6 +112,10 @@ export default createGlobalStyle`
         background: ${({ theme }) => theme.COLORS.YELLOW};
         border-radius: 8px;
       }
+    }
+
+    a {
+      padding: 1rem 2rem;
     }
   }
 `;
