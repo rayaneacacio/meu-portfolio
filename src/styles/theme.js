@@ -7,7 +7,6 @@ export default {
 
     PURPLE: "#725293",
     PURPLE_200: "#e1b4e5",
-    PURPLE_500: "#efb1f5",
     PURPLE_700: "rgb(54, 52, 75)",
 
     BLACK: "#171717",

@@ -12,7 +12,7 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
-    padding: 2rem;
+    padding: 5px 2rem;
     border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY};
     position: relative;
   }
@@ -253,7 +253,7 @@ export const Main = styled.main`
   }
 
   .contato {
-    background-color: ${({ theme }) => theme.COLORS.PURPLE_500};
+    background-color: ${({ theme }) => theme.COLORS.PURPLE_200};
     color: ${({ theme }) => theme.COLORS.WHITE};
     width: 100%;
     height: 80vh;
@@ -265,7 +265,7 @@ export const Main = styled.main`
     justify-content: space-between;
 
     > :first-child {
-      background-color: ${({ theme }) => theme.COLORS.PURPLE_500};
+      background-color: ${({ theme }) => theme.COLORS.PURPLE_200};
       width: 100%;
       height: 35px;
       top: -1rem;
@@ -304,6 +304,7 @@ export const Main = styled.main`
 
     a {
       color: ${({ theme }) => theme.COLORS.PINK_900};
+      font-size: 2.2rem;
     }
   }
 
@@ -375,10 +376,6 @@ export const Main = styled.main`
     }
 
     .contato {
-      a{
-        font-size: 2.2rem
-      }
-      
       > :first-child {
         height: 56px;
       }
