@@ -103,11 +103,11 @@ export function Home() {
         <div className="home">
           <div>
             <h2>Oie! Eu sou </h2>
-            <h1 style={{ color: "#d891de" }}>Rayane Acácio,</h1>
-            <h2 style={{ color: "#a1eacd" }}>desenvolvedora web</h2>
+            <h1>Rayane Acácio,</h1>
+            <h2>desenvolvedora web</h2>
 
             <div className="homeButtons">
-              <a href="https://drive.google.com/file/d/1u5zV9TBfF_C59MgGcvwebeZmfYMR3uWl/view?usp=sharing" target="_blank">CERTIFICADO</a>
+              <a href="https://drive.google.com/file/d/1f0d7rsW0VTWhrYpshMNuKMd6BwSSIOIG/view?usp=sharing" target="_blank">CURRÍCULO</a>
               <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank">LINKEDIN</a>
             </div>
           </div>
@@ -161,7 +161,7 @@ export function Home() {
             repository="https://github.com/rayaneacacio/Acai-Ruby" 
             deploy="https://acai-ruby.netlify.app"
             languages={[ <BiLogoTypescript size={ 35 } />, <SiSqlite size={ 30 } />, <FaReact size={ 32 } />, <SiStyledcomponents size={ 50 } />, <FaNode size={ 40 } /> ]}
-            description="Totem de autoatendimento para acaiteria desenvolvido com TypeScript, React JS, 
+            description="Totem de autoatendimento para açaiteria desenvolvido com TypeScript, React JS, 
             Styled Components, e uma API Node.js com banco de dados SQLite. Esse projeto oferece uma maneira simples
             e rápida para os clientes fazerem pedidos e inclui um site de administração, para alterações no sistema quando necessário." />
 
@@ -208,7 +208,7 @@ export function Home() {
             <p>me encontre aqui:</p>
             <button>
               <a href="mailto:rayaneacacio48@gmail.com"> <IoMdMail /> rayaneacacio48@gmail.com</a>
-              <div className="borderEmail" style={{ height: "2px", background: "white" }}></div>
+              <div className="borderEmail" style={{ height: "2px", background: "#725293" }}></div>
             </button>
 
             <div className="divRedesSociais" style={{ display: "flex", opacity: "0" }}>

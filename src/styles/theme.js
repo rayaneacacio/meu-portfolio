@@ -6,11 +6,11 @@ export default {
     BACKGROUND: "#dc8fad",
 
     PURPLE: "#725293",
-    PURPLE_200: "#e1b4e5",
+    PURPLE_200: "#b988bd",
     PURPLE_700: "rgb(54, 52, 75)",
 
     BLACK: "#171717",
-    BACKGROUND_2: "#6c757d",
+    BACKGROUND_2: "#8dbcd0",
     GRAY: "rgb(25, 25, 25)",
 
     WHITE: "#FFF",

@@ -61,7 +61,7 @@ export const Container = styled.div`
 
   footer {
     background: ${({ theme }) => theme.COLORS.BACKGROUND};
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.PINK_900};
     font-size: 1.5rem;
     width: 100%;
     height: 5rem;
@@ -190,7 +190,7 @@ export const Main = styled.main`
 
   .sobre_mim {
     color: ${({ theme }) => theme.COLORS.PURPLE_700};
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-align: justify;
     width: 100%;
     margin-bottom: 3rem;
@@ -293,17 +293,21 @@ export const Main = styled.main`
       margin-top: 5rem;
 
       a {
-        color: ${({ theme }) => theme.COLORS.PINK_900};
+        color: ${({ theme }) => theme.COLORS.WHITE};
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 1rem;
         padding: 1rem 2rem;
+
+        &:hover {
+          filter: brightness(1);
+        }
       }
     }
 
     a {
-      color: ${({ theme }) => theme.COLORS.PINK_900};
+      color: ${({ theme }) => theme.COLORS.WHITE};
       font-size: 2.2rem;
     }
   }
@@ -340,7 +344,7 @@ export const Main = styled.main`
       margin: 0;
 
       p {
-        width: 65rem;
+        width: 75rem;
         padding: 0;
       }
 
