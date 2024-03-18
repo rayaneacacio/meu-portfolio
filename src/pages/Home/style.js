@@ -191,7 +191,7 @@ export const Main = styled.main`
   .sobre_mim {
     color: ${({ theme }) => theme.COLORS.PURPLE_700};
     font-size: 2rem;
-    text-align: justify;
+    text-align: left;
     width: 100%;
     margin-bottom: 3rem;
 
