@@ -61,7 +61,7 @@ export const Container = styled.div`
 
   footer {
     background: ${({ theme }) => theme.COLORS.BACKGROUND};
-    color: ${({ theme }) => theme.COLORS.YELLOW};
+    color: ${({ theme }) => theme.COLORS.WHITE};
     font-size: 1.5rem;
     width: 100%;
     height: 5rem;

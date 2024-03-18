@@ -104,7 +104,7 @@ export function Home() {
           <div>
             <h2>Oie! Eu sou </h2>
             <h1 style={{ color: "#d891de" }}>Rayane Acácio,</h1>
-            <h2 style={{ color: "#9192de" }}>desenvolvedora web</h2>
+            <h2 style={{ color: "#a1eacd" }}>desenvolvedora web</h2>
 
             <div className="homeButtons">
               <a href="https://drive.google.com/file/d/1u5zV9TBfF_C59MgGcvwebeZmfYMR3uWl/view?usp=sharing" target="_blank">CERTIFICADO</a>

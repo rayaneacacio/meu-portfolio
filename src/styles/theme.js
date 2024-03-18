@@ -11,13 +11,13 @@ export default {
     PURPLE_700: "rgb(54, 52, 75)",
 
     BLACK: "#171717",
-    BACKGROUND_2: "#d4d4d4",
+    BACKGROUND_2: "#6c757d",
     GRAY: "rgb(25, 25, 25)",
 
     WHITE: "#FFF",
 
-    GREEN: "#9398d9",
-    YELLOW: "#fffbb2",
+    GREEN: "#a1eacd",
+    YELLOW: "#f4f1bb",
   },
 
   FONTS: {
