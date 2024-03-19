@@ -7,7 +7,7 @@ export const Container = styled.div`
   position: relative;
 
   header {
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
+    background: ${({ theme }) => theme.COLORS.PURPLE_700};
     width: 100%;
     display: flex;
     justify-content: space-between;
