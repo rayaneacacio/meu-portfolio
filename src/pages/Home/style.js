@@ -131,7 +131,7 @@ export const Main = styled.main`
   overflow: hidden;
 
   .home {
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
+    background: ${({ theme }) => theme.COLORS.PURPLE_700};
     color: ${({ theme }) => theme.COLORS.WHITE};
     width: 100%;
     height: 100vh;
@@ -149,7 +149,7 @@ export const Main = styled.main`
     }
 
     > :last-child {
-      background: ${({ theme }) => theme.COLORS.BACKGROUND_2};
+      background: ${({ theme }) => theme.COLORS.PURPLE_700};
       width: 100%;
       height: 35px;
       bottom: -1rem;

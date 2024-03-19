@@ -103,8 +103,8 @@ export function Home() {
         <div className="home">
           <div>
             <h2>Oie! Eu sou </h2>
-            <h1>Rayane Acácio,</h1>
-            <h2>desenvolvedora web</h2>
+            <h1 style={{ color: "#b988bd" }}>Rayane Acácio,</h1>
+            <h2 style={{ color: "#a1eacd" }}>desenvolvedora web</h2>
 
             <div className="homeButtons">
               <a href="https://drive.google.com/file/d/1f0d7rsW0VTWhrYpshMNuKMd6BwSSIOIG/view?usp=sharing" target="_blank">CURRÍCULO</a>

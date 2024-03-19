@@ -10,7 +10,7 @@ export default {
     PURPLE_700: "rgb(54, 52, 75)",
 
     BLACK: "#171717",
-    BACKGROUND_2: "#8dbcd0",
+    // BACKGROUND_2: "#8ca0c4",
     GRAY: "rgb(25, 25, 25)",
 
     WHITE: "#FFF",
