@@ -1,14 +1,7 @@
-import { IoLogoJavascript } from "react-icons/io";
-import { FaReact } from "react-icons/fa";
-import { FaNode } from "react-icons/fa";
-import { SiStyledcomponents } from "react-icons/si";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiSqlite } from "react-icons/si";
+import { Container } from "./style";
 import { FiExternalLink } from "react-icons/fi";
 
-import { Container } from "./style";
-
-export function Projeto({ img, img_mobile, name, description, languages, repository, deploy, style }) {
+export function Projeto({ img, img_mobile, name, description, languages, repository, deploy }) {
   return (
     <Container>
       <h2>{ name }</h2>

@@ -193,15 +193,14 @@ export const Main = styled.main`
     font-size: 2rem;
     text-align: left;
     width: 100%;
+    padding-bottom: 2rem;
     margin-bottom: 3rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-
-    padding-bottom: 2rem;
+    opacity: 0;
 
     p {
       width: 100%;
@@ -210,10 +209,6 @@ export const Main = styled.main`
 
     h2 {
       color: ${({ theme }) => theme.COLORS.WHITE};
-    }
-
-    p, h2, div {
-      opacity: 0;
     }
 
     > :last-child {
@@ -239,7 +234,6 @@ export const Main = styled.main`
     background-color: ${({ theme }) => theme.COLORS.BLACK};
     width: 100%;
     padding: 5rem 3rem 10rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -278,7 +272,6 @@ export const Main = styled.main`
       flex-direction: column;
       align-items: center;
       gap: 1rem;
-      opacity: 0;
 
       a {
         padding: 1rem;

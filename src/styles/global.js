@@ -16,11 +16,18 @@ export default createGlobalStyle`
   body {
     font-size: 1.4rem;
     background: ${({ theme }) => theme.COLORS.BACKGROUND};
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+    overflow: hidden;
 
-    &::-webkit-scrollbar {
-      display: none;
+    > div {
+      width: 100%;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 
@@ -78,7 +85,7 @@ export default createGlobalStyle`
     }
   }
 
-  @keyframes toRigth {
+  @keyframes toRight {
     from {
       opacity: 0;
       width: 0;
@@ -101,7 +108,7 @@ export default createGlobalStyle`
   }
 
   @media(min-width: 1000px) {
-    body {
+    body div {
       &::-webkit-scrollbar {
         display: block;
         background: transparent;

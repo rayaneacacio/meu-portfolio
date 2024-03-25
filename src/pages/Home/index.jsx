@@ -7,7 +7,6 @@ import { SiJavascript, SiSqlite, SiStyledcomponents } from "react-icons/si";
 import { IoMdMail } from "react-icons/io";
 import { FaHeart } from "react-icons/fa6";
 import { BiLogoTypescript } from "react-icons/bi";
-
 import minha_foto from "../../assets/eu.png";
 import imgZer01Modas from "../../assets/zer01modas.jpeg";
 import imgZer01Modas_mobile from "../../assets/zer01modas_mobile.jpeg";
@@ -18,19 +17,61 @@ import imgExpertNotes from "../../assets/expertnotes.jpeg";
 import imgExpertNotes_mobile from "../../assets/expertnotes_mobile.jpeg";
 import imgAcaiRuby from "../../assets/acaiRuby.jpeg";
 import imgAcaiRubyMobile from "../../assets/acaiRubyMobile.jpeg";
+import imgFreddyBarber from "../../assets/FreddyBarber.png";
+import imgFreddyBarberMobile from "../../assets/freddyBarberMobile.png";
 import icondev from "../../assets/devicon.svg";
 
 import { Projeto } from "../../components/projeto";
-
 import { Container, Main } from "./style";
 
 export function Home() {
+  const intersectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.style.animation = "visible 1s forwards";
+      }
+    });
+  }, {
+    threshold: 0
+  });
+
+  const observeDivContato = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        if(entry.target.classList.contains("borderEmail")) {
+          entry.target.style.animation = "toRight 1s forwards";
+          entry.target.animationDelay = "0.3s";
+          return;
+        }
+
+        entry.target.style.animation = "contatosAnimation 0.5s forwards";
+        entry.target.style.animationDelay = "1s";
+      }
+    });
+  }, {
+    threshold: 0
+  });
+
+  document.querySelector("body div").addEventListener("scroll", () => {
+    const divSobreMim = document.querySelector(".sobre_mim");
+    const projetos = Array.from(document.querySelectorAll(".projetos > div"));
+    const divRedesSociais = document.querySelector(".divRedesSociais");
+    const borderEmail = document.querySelector(".borderEmail");
+
+    [divSobreMim, ...projetos].map(element => {
+      intersectionObserver.observe(element);
+    });
+
+    observeDivContato.observe(borderEmail);
+    observeDivContato.observe(divRedesSociais);
+  });
+
   function handleNavigateSections(section) {
     //para a scroll rolar ate a section escolhida;
     let div = (section.target.innerText).toLowerCase();
     div = div.replace(" ", "_");
 
-    window.scroll({
+    document.querySelector("body div").scroll({
       top: (0, document.querySelector(`.${ div }`).offsetTop - 110),
       behavior: "smooth"
     });
@@ -51,31 +92,6 @@ export function Home() {
       }
     }
   }
-
-  window.addEventListener("scroll", () => {
-    //para mostrar a secao;
-    Array.from(document.querySelectorAll("main > div")).map(div => {
-        if(window.scrollY >= div.offsetTop-400 && div.className != "home") {
-          Array.from(div.children).map(children => {
-
-            if(children.className != "blank") {
-              if(children != document.querySelector("footer")) {
-                children.style.animation = "visible 1s forwards";
-              }
-            }
-          });
-
-          if(div.className == "contato") {
-            document.querySelector(".borderEmail").style.animation = "toRigth 2s forwards";
-
-            const divRedesSociais = div.querySelector(".divRedesSociais");
-            divRedesSociais.style.animation = "contatosAnimation 0.5s forwards";
-            divRedesSociais.style.animationDelay = "1s";
-          }
-
-        }
-    });
-  });
   
   return (
     <Container>
@@ -175,6 +191,16 @@ export function Home() {
             adicionar promoções  e cupons de desconto." />
 
           <Projeto 
+            img={ imgFreddyBarber }
+            img_mobile={ imgFreddyBarberMobile }
+            name="Freddy Barber"
+            repository="https://github.com/rayaneacacio/Freddy-Barber"
+            deploy="https://freddybarber.netlify.app"
+            languages={[ <BiLogoTypescript size={ 35 } />, <FaReact size={ 32 } />, <SiStyledcomponents size={ 35 } /> ]}
+            description="Landing page para a barbearia Freddy Barber. Feito com TypeScript, ReactJS e Styled Components"
+          />
+
+          <Projeto 
             img={ imgExpertNotes } 
             img_mobile={ imgExpertNotes_mobile } 
             name="Expert Notes" 
@@ -208,7 +234,7 @@ export function Home() {
             <p>me encontre aqui:</p>
             <button>
               <a href="mailto:rayaneacacio48@gmail.com"> <IoMdMail /> rayaneacacio48@gmail.com</a>
-              <div className="borderEmail" style={{ height: "2px", background: "#725293" }}></div>
+              <div className="borderEmail" style={{ height: "2px", background: "#725293", opacity: 0 }}></div>
             </button>
 
             <div className="divRedesSociais" style={{ display: "flex", opacity: "0" }}>
