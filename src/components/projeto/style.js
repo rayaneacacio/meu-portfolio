@@ -14,7 +14,7 @@ export const Container = styled.div`
   }
 
   > div {
-    width: 31rem;
+    width: 29rem;
     position: relative;
   }
 
