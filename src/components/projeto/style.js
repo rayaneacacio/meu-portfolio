@@ -94,7 +94,7 @@ export const Container = styled.div`
     }
 
     .description {
-      width: 55rem;
+      max-width: 55rem;
     }
   }
 `;

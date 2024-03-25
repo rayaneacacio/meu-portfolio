@@ -379,7 +379,7 @@ export const Main = styled.main`
         flex-direction: row-reverse;
 
         h2 {
-          top: 0;
+          top: -1rem;
         }
       }
     }

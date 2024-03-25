@@ -7,7 +7,7 @@ import { SiJavascript, SiSqlite, SiStyledcomponents } from "react-icons/si";
 import { IoMdMail } from "react-icons/io";
 import { FaHeart } from "react-icons/fa6";
 import { BiLogoTypescript } from "react-icons/bi";
-import minha_foto from "../../assets/eu2.jpeg";
+import minha_foto from "../../assets/eu2.png";
 import imgZer01Modas from "../../assets/zer01modas.jpeg";
 import imgZer01Modas_mobile from "../../assets/zer01modas_mobile.jpeg";
 import imgFoodExplorer from "../../assets/foodexplorer.jpeg";
@@ -178,7 +178,7 @@ export function Home() {
             deploy="https://acai-ruby.netlify.app"
             languages={[ <BiLogoTypescript size={ 35 } />, <SiSqlite size={ 30 } />, <FaReact size={ 32 } />, <SiStyledcomponents size={ 50 } />, <FaNode size={ 40 } /> ]}
             description="Totem de autoatendimento para açaiteria. Esse projeto oferece uma maneira simples
-            e rápida para os clientes fazerem pedidos e inclui um site de administração, para alterações no sistema quando necessário." />
+            e rápida para os clientes fazerem pedidos e inclui um site de administração, para alterações no sistema quando necessário. Desenvolvido com TypeScript, ReactJS, Styled Components, NodeJs e SQLite." />
 
           <Projeto 
             img={ imgZer01Modas } 
@@ -186,7 +186,7 @@ export function Home() {
             name="Zer01 Modas" 
             languages={[ <SiJavascript size={ 30 } />, <FaReact size={ 32 } />, <SiSqlite size={ 30 } />, <SiStyledcomponents size={ 50 } />, <FaNode size={ 40 } /> ]}
             repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app"
-            description="Ecommerce de moda. Apresenta um catálogo de roupas para os clientes e o administrador da loja 
+            description="Ecommerce desenvolvido com JavaScript, ReactJS, Styled Components, NodeJs e SQLite. Apresenta um catálogo de roupas para os clientes e o administrador da loja 
             pode editar o catálogo, adicionar promoções  e cupons de desconto." />
 
           <Projeto 
