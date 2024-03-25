@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   color: ${({ theme }) => theme.COLORS.WHITE};
-  font-size: 1.8rem;
   border-radius: 5px;
   display: flex;
   flex-direction: column;

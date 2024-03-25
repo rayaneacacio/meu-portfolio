@@ -108,6 +108,10 @@ export default createGlobalStyle`
   }
 
   @media(min-width: 1000px) {
+    body {
+      font-size: 1.9rem;
+    }
+
     body div {
       &::-webkit-scrollbar {
         display: block;

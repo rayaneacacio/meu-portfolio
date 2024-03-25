@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100vw;
   color: ${({ theme }) => theme.COLORS.PINK};
-  font-size: 1.6rem;
   position: relative;
 
   header {
@@ -134,7 +133,7 @@ export const Main = styled.main`
     background: ${({ theme }) => theme.COLORS.PURPLE_700};
     color: ${({ theme }) => theme.COLORS.WHITE};
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding-bottom: 5rem;
     display: flex;
     flex-direction: column-reverse;
@@ -190,7 +189,6 @@ export const Main = styled.main`
 
   .sobre_mim {
     color: ${({ theme }) => theme.COLORS.PURPLE_700};
-    font-size: 2rem;
     text-align: left;
     width: 100%;
     padding-bottom: 2rem;
@@ -250,7 +248,7 @@ export const Main = styled.main`
     background-color: ${({ theme }) => theme.COLORS.PURPLE_200};
     color: ${({ theme }) => theme.COLORS.WHITE};
     width: 100%;
-    height: 80vh;
+    min-height: 80vh;
     position: relative;
     text-align: center;
     display: flex;
@@ -311,11 +309,24 @@ export const Main = styled.main`
     }
   }
 
-  @media(min-width: 700px) {
+  @media(min-width: 750px) {
+    .projetos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  @media(min-width: 1000px) {
     .home {
-      height: 90vh;
+      min-height: 90vh;
       padding: 0;
       flex-direction: row-reverse;
+      padding: 10rem 0;
+
+      > div:not(.blank) {
+        z-index: 1;
+      }
 
       > :first-child {
         text-align: left;
@@ -329,12 +340,9 @@ export const Main = styled.main`
   }
 
   @media(min-width: 1000px) {
-    font-size: 1.6rem;
-
     .sobre_mim {
       text-align: center;
-      height: 80vh;
-      padding: 10rem 0;
+      min-height: 80vh;
       gap: 5rem;
       margin: 0;
 
@@ -354,6 +362,7 @@ export const Main = styled.main`
       flex-direction: row;
       gap: 10rem;
       margin: 0;
+      z-index: 1;
 
       svg {
         width: 10rem;
@@ -362,6 +371,7 @@ export const Main = styled.main`
     }
 
     .projetos {
+      display: flex;
       padding: 13rem 5rem 20rem;
       gap: 15rem;
 

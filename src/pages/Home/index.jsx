@@ -7,7 +7,7 @@ import { SiJavascript, SiSqlite, SiStyledcomponents } from "react-icons/si";
 import { IoMdMail } from "react-icons/io";
 import { FaHeart } from "react-icons/fa6";
 import { BiLogoTypescript } from "react-icons/bi";
-import minha_foto from "../../assets/eu.png";
+import minha_foto from "../../assets/eu2.jpeg";
 import imgZer01Modas from "../../assets/zer01modas.jpeg";
 import imgZer01Modas_mobile from "../../assets/zer01modas_mobile.jpeg";
 import imgFoodExplorer from "../../assets/foodexplorer.jpeg";
@@ -177,8 +177,7 @@ export function Home() {
             repository="https://github.com/rayaneacacio/Acai-Ruby" 
             deploy="https://acai-ruby.netlify.app"
             languages={[ <BiLogoTypescript size={ 35 } />, <SiSqlite size={ 30 } />, <FaReact size={ 32 } />, <SiStyledcomponents size={ 50 } />, <FaNode size={ 40 } /> ]}
-            description="Totem de autoatendimento para açaiteria desenvolvido com TypeScript, React JS, 
-            Styled Components, e uma API Node.js com banco de dados SQLite. Esse projeto oferece uma maneira simples
+            description="Totem de autoatendimento para açaiteria. Esse projeto oferece uma maneira simples
             e rápida para os clientes fazerem pedidos e inclui um site de administração, para alterações no sistema quando necessário." />
 
           <Projeto 
@@ -187,8 +186,8 @@ export function Home() {
             name="Zer01 Modas" 
             languages={[ <SiJavascript size={ 30 } />, <FaReact size={ 32 } />, <SiSqlite size={ 30 } />, <SiStyledcomponents size={ 50 } />, <FaNode size={ 40 } /> ]}
             repository="https://github.com/rayaneacacio/Zer01_Modas" deploy="https://zer01modas.netlify.app"
-            description="Ecommerce desenvolvido com JavaScript, ReactJS, Styled Components, NodeJS e banco de dados SQLite. Apresenta um catálogo de roupas para os clientes e o administrador da loja pode editar o catálogo,
-            adicionar promoções  e cupons de desconto." />
+            description="Ecommerce de moda. Apresenta um catálogo de roupas para os clientes e o administrador da loja 
+            pode editar o catálogo, adicionar promoções  e cupons de desconto." />
 
           <Projeto 
             img={ imgFreddyBarber }
@@ -215,8 +214,8 @@ export function Home() {
             name="Food Explorer" 
             languages={[ <SiJavascript size={ 30 } />, <FaReact size={ 32 } />, <SiSqlite size={ 30 } />, <SiStyledcomponents size={ 50 } />, <FaNode size={ 40 } />  ]}
             repository="https://github.com/rayaneacacio/food-explorer" deploy="https://sparkly-pavlova-9f4ab9.netlify.app/"
-            description="Menu interativo para um restaurante desenvolvido com JavaScript, ReactJS, Styled Components, NodeJS e banco de dados SQLite. Aplicação interativa que facilita o processo de pedidos e possui uma página
-            de organização e gestão do cardápio para o dono do restaurante." />
+            description="Menu para um restaurante. Aplicação interativa que facilita o processo de pedidos e
+            possui uma página de organização e gestão do cardápio para o dono do restaurante." />
 
           <Projeto 
             img={ imgRocketMovies } 
