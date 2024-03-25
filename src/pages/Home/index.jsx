@@ -123,7 +123,7 @@ export function Home() {
             <h2 style={{ color: "#a1eacd" }}>desenvolvedora web</h2>
 
             <div className="homeButtons">
-              <a href="https://drive.google.com/file/d/1f0d7rsW0VTWhrYpshMNuKMd6BwSSIOIG/view?usp=sharing" target="_blank">CURRÍCULO</a>
+              <a href="https://drive.google.com/file/d/1y2ri7zpX6N1Z7LFRFQoj_LZe5QkiwdRS/view?usp=sharing" target="_blank">CURRÍCULO</a>
               <a href="https://www.linkedin.com/in/rayane-ac%C3%A1cio-274092252/" target="_blank">LINKEDIN</a>
             </div>
           </div>

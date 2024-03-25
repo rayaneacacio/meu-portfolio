@@ -311,9 +311,7 @@ export const Main = styled.main`
     }
   }
 
-  @media(min-width: 1000px) {
-    font-size: 1.6rem;
-
+  @media(min-width: 700px) {
     .home {
       height: 90vh;
       padding: 0;
@@ -328,6 +326,10 @@ export const Main = styled.main`
         height: 75px;
       }
     }
+  }
+
+  @media(min-width: 1000px) {
+    font-size: 1.6rem;
 
     .sobre_mim {
       text-align: center;
