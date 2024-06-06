@@ -31,8 +31,9 @@ export const Container = styled.div`
     border-radius: 5px;
   }
 
-  .imgDesktop, .imgMobile {
-    filter: drop-shadow(1px 2px 5px rgba(2,2,2,0.46495094619879207));
+  .imgDesktop,
+  .imgMobile {
+    filter: drop-shadow(1px 2px 5px rgba(2, 2, 2, 0.46495094619879207));
   }
 
   .imgMobile {
@@ -43,7 +44,8 @@ export const Container = styled.div`
     bottom: 0;
     right: -1rem;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   }
 
   .description {
@@ -79,7 +81,7 @@ export const Container = styled.div`
     }
   }
 
-  @media(min-width: 1000px) {
+  @media (min-width: 1000px) {
     flex-direction: row;
 
     > h2 {
@@ -88,13 +90,14 @@ export const Container = styled.div`
       left: -1rem;
     }
 
-    > div, > div:first-of-type {
+    > div,
+    > div:first-of-type {
       width: 49rem;
       height: 29rem;
     }
 
     .description {
-      max-width: 55rem;
+      max-width: 40rem;
     }
   }
 `;

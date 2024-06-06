@@ -15,13 +15,13 @@ export const Container = styled.div`
     opacity: 0;
   }
 
-  @media(min-width: 750px) {
+  @media (min-width: 750px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
 
-  @media(min-width: 1000px) {
+  @media (min-width: 1000px) {
     display: flex;
     padding: 13rem 5rem 20rem;
     gap: 15rem;

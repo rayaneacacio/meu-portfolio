@@ -1,13 +1,13 @@
 import { Container } from "./style";
 import { FiExternalLink } from "react-icons/fi";
 
-export function Projeto({ img, img_mobile, name, description, languages, repository, deploy }) {
+export function Projeto({ imgDesktop, img_mobile, name, description, languages, repository, deploy }) {
   return (
     <Container>
       <h2>{ name }</h2>
 
       <div>
-        <div className="imgDesktop" style={{ backgroundImage: `URL(${ img })` }} ></div>
+        <div className="imgDesktop" style={{ backgroundImage: `URL(${ imgDesktop })` }} ></div>
 
         {
           img_mobile &&
@@ -28,15 +28,18 @@ export function Projeto({ img, img_mobile, name, description, languages, reposit
         </div>
 
         <div className="links">
-          <a href={ deploy } target="_blank" >
+          <a href={ deploy } target="_blank" rel="noreferrer" >
             <p>ver site</p>
             { <FiExternalLink size={ 20 } /> }
           </a>
 
-          <a href={ repository } target="_blank" >
-            <p>repositório</p>
-            { <FiExternalLink size={ 20 } /> } 
-          </a>
+          {
+            repository &&
+             <a href={ repository } target="_blank" rel="noreferrer" >
+              <p>repositório</p>
+              { <FiExternalLink size={ 20 } /> } 
+            </a>
+          }
         </div>
 
       </div>

@@ -20,7 +20,8 @@ export default createGlobalStyle`
 
     > div {
       width: 100%;
-      height: 100vh;
+      height: -webkit-fill-available;
+      max-height: 100vh;
       overflow-x: hidden;
       overflow-y: auto;
       scroll-behavior: smooth;
@@ -116,7 +117,7 @@ export default createGlobalStyle`
       &::-webkit-scrollbar {
         display: block;
         background: transparent;
-        width: 0.5rem;
+        width: 1rem;
       }
 
       &::-webkit-scrollbar-thumb {

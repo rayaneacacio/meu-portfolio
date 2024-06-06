@@ -48,7 +48,7 @@ export const Container = styled.div`
     }
   }
 
-  @media(min-width: 1000px) {
+  @media (min-width: 1000px) {
     text-align: center;
     min-height: 80vh;
     gap: 5rem;
