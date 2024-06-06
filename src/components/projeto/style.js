@@ -63,14 +63,17 @@ export const Container = styled.div`
   }
 
   .links {
+    width: 100%;
     display: flex;
     gap: 1rem;
 
     a {
       background-color: ${({ theme }) => theme.COLORS.PINK_200};
       color: ${({ theme }) => theme.COLORS.PINK_900};
+      width: 100%;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 5px;
 
       &:hover {
@@ -98,6 +101,10 @@ export const Container = styled.div`
 
     .description {
       max-width: 40rem;
+    }
+
+    .links {
+      width: auto;
     }
   }
 `;

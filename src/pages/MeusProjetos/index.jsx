@@ -25,7 +25,7 @@ export default function MeusProjetos() {
         name="Fugini Store" 
         languages={[ <SiJavascript size={ 30 } />, <FaReact size={ 32 } />, <FaCss3Alt size={ 32 } /> ]}
         deploy="https://www.comprefugini.com.br/"
-        description="Atualmente trabalho como dev frontend na JBQ. Global e faço parte da equipe de manutenção da Fugini e Ramy Store." />
+        description="Atualmente trabalho como dev frontend na JBQ. Global e faço parte da equipe de desenvolvimento e manutenção da Fugini e Ramy Store." />
 
        <Projeto 
         imgDesktop={ imgAcaiRuby } 

@@ -19,7 +19,8 @@ export const Container = styled.div`
     position: absolute;
   }
 
-  .sobre_mim, .projetos > div {
+  .sobre_mim,
+  .projetos > div {
     opacity: 0;
   }
 
@@ -28,8 +29,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.PINK_900};
     font-size: 1.5rem;
     width: 100%;
-    height: 5rem;
-    padding: 3rem 2rem 5rem;
+    padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,6 @@ export const DivHome = styled.div`
     transform: skew(-82deg, 10deg);
   }
 
-  
   .divImg {
     display: flex;
     flex-direction: column;
@@ -102,13 +101,13 @@ export const DivHome = styled.div`
     }
   }
 
-  @media(min-width: 500px) {
+  @media (min-width: 500px) {
     .blank {
       transform: skew(-82deg, 3deg);
     }
   }
 
-  @media(min-width: 1000px) {
+  @media (min-width: 1000px) {
     min-height: 90vh;
     padding: 0;
     flex-direction: row-reverse;
